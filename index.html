@@ -1,0 +1,2946 @@
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js " lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Meta -->
+    <title>Edulogy</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- ESRI BASEMAP -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+
+    <script src="https://unpkg.com/esri-leaflet@2.3.2/dist/esri-leaflet.js"
+        integrity="sha512-6LVib9wGnqVKIClCduEwsCub7iauLXpwrd5njR2J507m3A2a4HXJDLMiSZzjcksag3UluIfuW1KzuWVI5n/cuQ=="
+        crossorigin=""></script>
+
+    <script src="js\peta\pantauhd_map.js"></script>
+
+    <!-- GOOGLE MAP ICON - ZOOM OUT -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- FONT AWESOME - SQUARE SYMBOLS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="js/leaflet.ajax.js"></script>
+
+    <!-- Custom & Default Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="style-map-v2.css">
+
+    <!-- CHECK ALL RADIO BUTTON -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- CHECK ALL RADIO BUTTON -->
+
+    <!-- SIMBOL LAYER PETA -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <!-- TANDA SERU DENGAN LNGKARAN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="images/loader.gif" alt="">
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <div id="wrapper">
+        <!-- BEGIN # MODAL LOGIN -->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
+                        <form id="login-form">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="flaticon-add" aria-hidden="true"></span>
+                            </button>
+                            <div class="modal-body">
+                                <input class="form-control" type="text" placeholder="What you are looking for?"
+                                    required>
+                            </div>
+                        </form><!-- End # Login Form -->
+                    </div><!-- End # DIV Form -->
+                </div>
+            </div>
+        </div>
+        <!-- END # MODAL LOGIN -->
+
+        <header class="header">
+            <div class="topbar clearfix">
+                <div class="row-fluid">
+                    <div class="col-md-6 col-sm-6 text-left">
+                        <p>
+                            <strong><i class="fa fa-phone"></i></strong> +90 543 123 45 67 &nbsp;&nbsp;
+                            <strong><i class="fa fa-envelope"></i></strong> <a href="mailto:#">info@yoursite.com</a>
+                        </p>
+                    </div><!-- end left -->
+                    <div class="col-md-6 col-sm-6 hidden-xs text-right">
+                        <div class="social">
+                            <a class="facebook" href="#" data-tooltip="tooltip" data-placement="bottom"
+                                title="Facebook"><i class="fa fa-facebook"></i></a>
+                            <a class="twitter" href="#" data-tooltip="tooltip" data-placement="bottom"
+                                title="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a class="google" href="#" data-tooltip="tooltip" data-placement="bottom"
+                                title="Google Plus"><i class="fa fa-google-plus"></i></a>
+                            <a class="linkedin" href="#" data-tooltip="tooltip" data-placement="bottom"
+                                title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                            <a class="pinterest" href="#" data-tooltip="tooltip" data-placement="bottom"
+                                title="Pinterest"><i class="fa fa-pinterest"></i></a>
+                        </div><!-- end social -->
+                    </div><!-- end left -->
+                </div><!-- end row -->
+            </div><!-- end topbar -->
+
+            <nav class="navbar navbar-default yamm">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="logo-normal">
+                        <a class="navbar-brand" href="index.html"><img src="images/pantauhd_white.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="indexEdit.html">Beranda</a></li>
+                        <li class="menu-aktif"><a href="peta_sidebar_addmodal_v2.html">Peta</a></li>
+                        <li class="dropdown hassubmenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false">Statistik
+                                <span class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="shop.html">Kehutanan</a></li>
+                                <li><a href="shop-single.html">Sosial Ekonomi</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li class="dropdown yamm-fw yamm-half"><a href="#" data-toggle="dropdown" class="dropdown-toggle active">Mega Menu <b class="fa fa-angle-down"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <div class="yamm-content clearfix">
+                                            <div class="row-fluid">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <h4>Course Pages</h4>
+                                                    <ul>
+                                                        <li><a href="#">Courses Name 01</a></li>
+                                                        <li><a href="#">Courses Name 02</a></li>
+                                                        <li><a href="#">Courses Name 03</a></li>
+                                                        <li><a href="#">Courses Name 04</a></li>
+                                                        <li><a href="#">Courses Name 05</a></li>
+                                                        <li><a href="#">Courses Name 06</a></li>
+                                                        <li><a href="#">Courses Name 07</a></li>
+                                                        <li><a href="#">Courses Name 08</a></li>
+                                                        <li><a href="#">Courses Name 09</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="menu-widget text-center">
+                                                        <div class="image-wrap entry">
+                                                            <img src="upload/course_01.jpg" alt="" class="img-responsive">
+                                                            <div class="magnifier">
+                                                                 <a href="#" title=""><i class="flaticon-add"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <h5><a href="#">Learning Bootstrap Framework</a></h5>
+                                                        <small>$22.00</small>
+                                                        <a href="#" class="menu-button">View Course</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li> -->
+                        <li class="dropdown hassubmenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false">Publikasi
+                                <span class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="shop.html">Dokumen</a></li>
+                                <li><a href="shop-single.html">Berita</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li class="dropdown hassubmenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="blog.html">Blog Right Sidebar</a></li>
+                                    <li><a href="blog-1.html">Blog Left Sidebar</a></li>
+                                    <li><a href="blog-2.html">Blog Grid Sidebar</a></li>
+                                    <li><a href="blog-3.html">Blog Grid Fullwidth</a></li>
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                </ul>
+                            </li> -->
+                        <li><a href="page-contact.html">Event</a></li>
+                        <!-- <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li> -->
+                        <li class="iconitem"> <a class="shopicon" href="shop-cart.html"><i
+                                    class="fa fa-shopping-basket"></i> &nbsp;
+                                Etalase Produk</a></li></i>
+                    </ul>
+                </div>
+            </nav><!-- end navbar -->
+        </header>
+
+        <!-- START MAP -->
+
+        <section id="home-map" class="img-home-section js-height-full">
+
+            <ul id="admin" class="nav navbar-nav side-nav-right"
+                style="list-style-type:none; overflow-x: hidden;height: 817px;border-bottom: 3px solid #18229a">
+
+                <div style="font-weight: bold; border-bottom: 1px solid #000; margin-bottom: 10px; margin-top: 10px">
+                    <a>DESA</a>
+                </div>
+
+                <table border="1" style=" width:100%;">
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Desa</th>
+                        <th class="total">Luas (ha)</th>
+                    </tr>
+                    <tr>
+                        <td>Ambarawa</td>
+                        <td class="total">6.277,15</td>
+                    </tr>
+                    <tr>
+                        <td>Batu Ampar</td>
+                        <td class="total">66.195,69</td>
+                    </tr>
+                    <tr>
+                        <td>Medan Mas</td>
+                        <td class="total">3.489.53</td>
+                    </tr>
+                    <tr>
+                        <td>Nipah Panjang</td>
+                        <td class="total">10.341,40</td>
+                    </tr>
+                    <tr>
+                        <td>Padang Tikar 1</td>
+                        <td class="total">1.570,59</td>
+                    </tr>
+                    <tr>
+                        <td>Sungai Besar</td>
+                        <td class="total">3.735,41</td>
+                    </tr>
+                    <tr>
+                        <td>Sungai Jawi</td>
+                        <td class="total">4.272,04</td>
+                    </tr>
+                    <tr>
+                        <td>Tanjung Harapan</td>
+                        <td class="total">28.450,21</td>
+                    </tr>
+                    <tr>
+                        <td>Tasik Malaya</td>
+                        <td class="total">3.792,75</td>
+                    </tr>
+                    <tr>
+                        <td>Teluk Nibung</td>
+                        <td class="total">6.136,07</td>
+                    </tr>
+                </table>
+
+                <div style="font-weight: bold; border-bottom: 1px solid #000; margin-bottom: 10px; margin-top: 10px">
+                    <a>HUTAN DESA</a>
+                </div>
+                <table border="1" style=" width:100%;">
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Hutan Desa</th>
+                        <th class="total">Luas (ha)</th>
+                    </tr>
+                    <tr>
+                        <td>Ambarawa</td>
+                        <td class="total">4.909,48</td>
+                    </tr>
+                    <tr>
+                        <td>Batu Ampar</td>
+                        <td class="total">33.100,32</td>
+
+                    </tr>
+                    <tr>
+                        <td>Medan Mas</td>
+                        <td class="total">1.846,66</td>
+
+                    </tr>
+                    <tr>
+                        <td>Nipah Panjang</td>
+                        <td class="total">6.940,31</td>
+
+                    </tr>
+                    <tr>
+                        <td>Padang Tikar 1</td>
+                        <td class="total">192,02</td>
+
+                    </tr>
+                    <tr>
+                        <td>Sungai Besar</td>
+                        <td class="total">2.898,46</td>
+
+                    </tr>
+                    <tr>
+                        <td>Sungai Jawi</td>
+                        <td class="total">3.383,22</td>
+
+                    </tr>
+                    <tr>
+                        <td>Tanjung Harapan</td>
+                        <td class="total">17.321,92</td>
+
+                    </tr>
+                    <tr>
+                        <td>Tasik Malaya</td>
+                        <td class="total">2.851,88</td>
+
+                    </tr>
+                    <tr>
+                        <td>Teluk Nibung</td>
+                        <td class="total">2.902,99</td>
+                    </tr>
+                </table>
+
+                <div style="font-weight: bold; border-bottom: 1px solid #000; margin-bottom: 10px; margin-top: 10px">
+                    <a>TUTUPAN HUTAN</a>
+                </div>
+                <table border="1" style=" width:100%;">
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Hutan Desa</th>
+                        <th class="total">Luas (ha)</th>
+                    </tr>
+                    <tr>
+                        <td>Hutan Lahan Kering Sekunder</td>
+                        <td class="total"> 1.090,28 </td>
+                    </tr>
+                    <tr>
+                        <td>Hutan Mangrove Sekunder</td>
+                        <td class="total">30.656,22 </td>
+                    </tr>
+                    <tr>
+                        <td>Hutan Rawa Sekunder</td>
+                        <td class="total">23.008,27</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color:#000">Total Hutan Desa</td>
+                        <td class="total" style="font-weight: bold; color:#000">54.754,77</td>
+                    </tr>
+
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Non Hutan Desa</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Hutan Lahan Kering Sekunder</td>
+                        <td class="total"> 172,20 </td>
+
+                    </tr>
+                    <tr>
+                        <td>Hutan Mangrove Sekunder</td>
+                        <td class="total"> 17.255,69 </td>
+                    </tr>
+                    <tr>
+                        <td>Hutan Rawa Sekunder</td>
+                        <td class="total"> 1.469,67 </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color:#000">Total Hutan Desa</td>
+                        <td class="total" style="font-weight: bold; color:#000">18.897,55</td>
+                    </tr>
+                    <tr style="background-color: #18229a; color: #fff">
+                        <td style="font-weight: bold; color:#fff">Grand Total</td>
+                        <td class="total" style="font-weight: bold; color:#fff">73.652,33</td>
+                    </tr>
+                </table>
+
+                <div style="font-weight: bold; border-bottom: 1px solid #000; margin-bottom: 10px; margin-top: 10px">
+                    <a>NON TUTUPAN HUTAN</a>
+                </div>
+                <table border="1" style=" width:100%;">
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Hutan Desa</th>
+                        <th class="total">Luas (ha)</th>
+                    </tr>
+                    <tr>
+                        <td>Belukar Rawa</td>
+                        <td class="total">16.260,21</td>
+                    </tr>
+                    <tr>
+                        <td>Perkebunan</td>
+                        <td class="total">268,79</td>
+                    </tr>
+                    <tr>
+                        <td>Pertanian Lahan Kering</td>
+                        <td class="total">1.812,22</td>
+                    </tr>
+                    <tr>
+                        <td>Pemukiman</td>
+                        <td class="total">-</td>
+                    </tr>
+                    <tr>
+                        <td>Rawa</td>
+                        <td class="total">30,78</td>
+                    </tr>
+                    <tr>
+                        <td>Semak Belukar</td>
+                        <td class="total">154,19</td>
+                    </tr>
+                    <tr>
+                        <td>Sawah</td>
+                        <td class="total">8,18</td>
+                    </tr>
+                    <tr></tr>
+                    <td>Tubuh Air</td>
+                    <td class="total">334,82</td>
+                    </tr>
+                    <tr>
+                        <td>Tambak</td>
+                        <td class="total">55,62</td>
+                    </tr>
+                    <tr>
+                        <td>Tanah Terbuka</td>
+                        <td class="total">2.667,67</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color:#000">Total Hutan Desa</td>
+                        <td class="total" style="font-weight: bold; color:#000">21.592,53
+                        </td>
+                    </tr>
+
+
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Non Hutan Desa</th>
+                        <th>Luas (ha)</th>
+                    </tr>
+                    <tr>
+                        <td>Belukar Rawa</td>
+                        <td class="total">16.394,98</td>
+                    </tr>
+                    <tr>
+                        <td>Perkebunan</td>
+                        <td class="total">8.336,39</td>
+                    </tr>
+                    <tr>
+                        <td>Pertanian Lahan Kering</td>
+                        <td class="total">10.386,55</td>
+                    </tr>
+                    <tr>
+                        <td>Pemukiman</td>
+                        <td class="total">138,48</td>
+                    </tr>
+                    <tr>
+                        <td>Rawa</td>
+                        <td class="total">-</td>
+                    </tr>
+                    <tr>
+                        <td>Semak Belukar</td>
+                        <td class="total">164,44</td>
+                    </tr>
+                    <tr>
+                        <td>Sawah</td>
+                        <td class="total">168,02</td>
+                    </tr>
+                    <tr></tr>
+                    <td>Tubuh Air</td>
+                    <td class="total">2.224,31
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>Tambak</td>
+                        <td class="total">165,25</td>
+                    </tr>
+                    <tr>
+                        <td>Tanah Terbuka</td>
+                        <td class="total">1.037,55
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color:#000">Total Non Hutan Desa</td>
+                        <td class="total" style="font-weight: bold; color:#000">39.016,01
+                        </td>
+
+                    </tr>
+                    <tr style="background-color: #18229a; color: #fff">
+                        <td style="font-weight: bold; color:#fff">Grand Total</td>
+                        <td class="total" style="font-weight: bold; color:#fff"> 60.608,55
+                        </td>
+                    </tr>
+                </table>
+
+                <div style="font-weight: bold; border-bottom: 1px solid #000; margin-bottom: 10px; margin-top: 10px">
+                    <a>KELAS LERENG</a>
+                </div>
+
+                <table border="1" style=" width:100%;">
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Hutan Desa</th>
+                        <th class="total">Luas (ha)</th>
+                    </tr>
+                    <tr>
+                        <td>2 %</td>
+                        <td class="total">57.875,77</td>
+                    </tr>
+                    <tr>
+                        <td>2 - 8 %</td>
+                        <td class="total">16.757,51</td>
+                    </tr>
+                    <tr>
+                        <td>9 - 15 %</td>
+                        <td class="total">390,20</td>
+                    </tr>
+                    <tr>
+                        <td>16 - 25 %</td>
+                        <td class="total">564,50</td>
+                    </tr>
+                    <tr>
+                        <td>26 - 40 %</td>
+                        <td class="total">582,94</td>
+                    </tr>
+                    <tr>
+                        <td>41 - 60 %</td>
+                        <td class="total">161,82</td>
+                    </tr>
+                    <tr>
+                        <td> 60 %</td>
+                        <td class="total">14,53</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color:#000">Total Hutan Desa</td>
+                        <td class="total" style="font-weight: bold; color:#000">76.347,30 </td>
+                    </tr>
+
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Non Hutan Desa</th>
+                        <th class="total">Luas (ha)</th>
+                    </tr>
+                    <tr>
+                        <td>2 %</td>
+                        <td class="total">43.375,16 </td>
+                    </tr>
+                    <tr>
+                        <td>2 - 8 %</td>
+                        <td class="total">13.587,78</td>
+                    </tr>
+                    <tr>
+                        <td>9 - 15 %</td>
+                        <td class="total">351,85</td>
+                    </tr>
+                    <tr>
+                        <td>16 - 25 %</td>
+                        <td class="total">291,83</td>
+                    </tr>
+                    <tr>
+                        <td>26 - 40 %</td>
+                        <td class="total">252,33</td>
+                    </tr>
+                    <tr>
+                        <td>41 - 60 %</td>
+                        <td class="total">54,59</td>
+                    </tr>
+                    <tr>
+                        <td> 60 %</td>
+                        <td class="total">-</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color:#000">Total Non Hutan Desa</td>
+                        <td class="total" style="font-weight: bold; color:#000"> 57.913,57
+                        </td>
+                    </tr>
+                    <tr style="background-color: #18229a; color: #fff">
+                        <td style="font-weight: bold; color:#fff">Grand Total</td>
+                        <td class="total" style="font-weight: bold; color:#fff"> 134.260,88
+                        </td>
+
+                    </tr>
+                </table>
+
+
+                <div style="font-weight: bold; border-bottom: 1px solid #000; margin-bottom: 10px; margin-top: 10px">
+                    <a>JENIS TANAH</a>
+                </div>
+
+                <table border="1" style=" width:100%;">
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Hutan Desa</th>
+                        <th class="total">Luas (ha)</th>
+                    </tr>
+                    <tr>
+                        <td>Typic Haplohemists</td>
+                        <td class="total">34.832,41</td>
+                    </tr>
+                    <tr>
+                        <td>Typic Quartzipsamments</td>
+                        <td class="total">128,55</td>
+
+                    </tr>
+                    <tr>
+                        <td>Sulfic Fluvaquents</td>
+                        <td class="total">917,46</td>
+
+                    </tr>
+                    <tr>
+                        <td>Typic Kandiudults</td>
+                        <td class="total">1.857</td>
+
+                    </tr>
+                    <tr>
+                        <td>Typic Sulfaquents</td>
+                        <td class="total">27.954,69</td>
+
+                    </tr>
+                    <tr>
+                        <td>Haplic Sulfaquents</td>
+                        <td class="total">10.237,63</td>
+                    </tr>
+                    <tr>
+                        <td>Air, Pemukiman, dll</td>
+                        <td class="total">419,53
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight: bold; color:#000">Total Hutan Desa</td>
+                        <td class="total" style="font-weight: bold; color:#000">76347.30
+                        </td>
+                    </tr>
+
+                    <tr style="background-color: #18229a; color: #fff">
+                        <th>Non Hutan Desa</th>
+                        <th class="total">Luas (ha)</th>
+                    </tr>
+                    <tr>
+                        <td>Typic Haplohemists</td>
+                        <td class="total">19.531,52</td>
+                    </tr>
+                    <tr>
+                        <td>Typic Quartzipsamments</td>
+                        <td class="total">5.139,62</td>
+                    </tr>
+                    <tr>
+                        <td>Sulfic Fluvaquents</td>
+                        <td class="total">3.647,16</td>
+                    </tr>
+                    <tr>
+                        <td>Typic Kandiudults</td>
+                        <td class="total">1.000,58</td>
+                    </tr>
+                    <tr>
+                        <td>Typic Sulfaquents</td>
+                        <td class="total">20.705,42</td>
+                    </tr>
+                    <tr>
+                        <td>Haplic Sulfaquents</td>
+                        <td class="total">6.495,68</td>
+                    </tr>
+                    <tr>
+                        <td>Air, Pemukiman, dll</td>
+                        <td class="total">1.393,57
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color:#000">Total Non Hutan Desa</td>
+                        <td class="total" style="font-weight: bold; color:#000">57.913,57
+                        </td>
+                    </tr>
+                    <tr style="background-color: #18229a; color: #fff">
+                        <td style="font-weight: bold; color:#fff">Grand Total</td>
+                        <td class="total" style="font-weight: bold; color:#fff"> 134.260,88
+                        </td>
+                    </tr>
+                </table>
+
+
+            </ul>
+
+            <style>
+                .total {
+                    text-align: right;
+                    padding-right: 5px;
+                    width: 10px;
+                }
+
+                #admin {
+                    display: block;
+                }
+
+                .side-nav-right {
+                    /* margin-left: -224px; */
+                    right: 61px;
+                    width: 301px;
+                    position: absolute;
+                    top: 129px;
+                    height: 87%;
+                    border-radius: 0;
+                    border: none;
+                    background-color: #fff;
+                    overflow-y: auto;
+                    border: 1px solid #D7DBDD;
+                    z-index: 300;
+                    margin: 6px;
+                    border-radius: 5px;
+                    display: block;
+                    padding: 10px;
+                }
+
+                th,
+                td {
+                    padding-left: 5px;
+                    font-family: 'Roboto';
+                    font-size: 14px;
+                    ;
+                }
+
+                tr {
+                    color: #000;
+
+                }
+
+                td {
+                    color: #6f6f6f
+                }
+
+                table {
+                    border-color: #dadada;
+                }
+            </style>
+
+            <button type="button" id="button-legend-layout" class="btn btn-info border-btn">
+                <span><i class="reseponsive-layer-text"><i class='fas fa-layer-group'></i> LAYER</i></span>
+                <span class=""><i class="reseponsive-layer-text disclaimer-icon arr-down" style="float: right"><i
+                            id="arrDown" class="fa fa-angle-down"></i></i></span>
+                <span class=""><i class="reseponsive-layer-text disclaimer-icon arr-up" style="float: right"><i
+                            id="arrUp" class="fa fa-angle-up"></i></i></span>
+            </button>
+
+            <!-- <button type="button" id="button-legend-layout-right" class="btn btn-info border-btn">
+        <span><i class="reseponsive-layer-text"><i class='fa fa-plane'></i> Lokasi Kunjungan</i></span>
+      </button>
+      <style>
+        #button-legend-layout-right {
+          display: block;
+          position: absolute;
+          /* border-radius: 5px; */
+          font-size: 12px;
+          text-align: center;
+          color: #fff;
+          background: #18229a;
+          width: 136px;
+          z-index: 400;
+          top: 135px;
+          right: 376px;
+          border-radius: 4px;
+          padding: 11px;
+          border: 2px solid #18229a;
+        }
+      </style> -->
+
+
+
+
+
+
+            <div class="navbar-collapse"></div>
+
+            <ul id="responsive-sidebar" class="nav navbar-nav side-nav"
+                style="list-style-type:none; overflow-x: hidden;height: 615px; border-bottom: 3px solid #18229a; display: block">
+                <button type="button" class="button-close-sidenav">
+                    <span><i>X</i></span>
+                </button>
+
+
+
+                <li style="padding-top: 5px; position: fixed; background-color: #fff; z-index: 5"><a class="no-hover"
+                        style='font-family: "Poppins", sans-serif; font-size: 14px;font-weight: bold; border-bottom: 1.5px solid #3b5998; width: 295px'><i
+                            class="material-icons" style="color: #18229a;vertical-align: sub;">satellite</i> LAYER PETA
+                    </a></li>
+
+
+                <li style="width: 84%; padding-top: 5px; padding-bottom: 31px;"><a
+                        style='font-family: "Poppins", sans-serif; font-size: 14px;font-weight: bold;  width: 84%; border-bottom: 1.5px solid #3b5998; width: 295px'>
+                    </a></li>
+
+                <ul class="list-unstyled components" style="">
+
+                    <li class="active">
+                    <li
+                        style="padding-top: 80px;padding-bottom: 10px;width: 295px; padding-top: 5px; border-bottom: 1px solid #def0e8 ">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle cool-link"
+                            style='font-family: "Roboto", sans-serif; font-size: 12px; font-weight: bold; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>ADMINISTRASI
+                            <i class="fa fa-caret-down"></i></a>
+                        <ul class="active list-unstyled" id="homeSubmenu">
+                            <li class="field check-round slide select-all-layout" style="">
+                                <input type="checkbox" name="select-allmonitgbt" id="select-all">
+                                <label for="select-all" style="font-size: 12px; font-family: " Roboto";">Semua Layer
+                                    Administrasi<span></span></label>
+                            </li>
+                            <ul class="field check-round slide" style="">
+                                <input type="checkbox" name="pusatdesa" id="pusatdesa" class="admin">
+                                <label for="pusatdesa" style="margin-top: -15px"><i class="material-icons"
+                                        style="font-size: 12px; color:blue">location_on</i> Pusat
+                                    Desa<span></span></label>
+                            </ul>
+                            <ul class="field check-round slide"
+                                style="font-family: 'Roboto', sans-serif; font-size: 12px;">
+                                <input type="checkbox" name="lokasikunjungan" id="lokasikunjungan" class="admin">
+                                <label for="lokasikunjungan" style="margin-top: -15px;"><i class='fa fa-square'
+                                        style='color:white; border: 1px solid #18e0a0'></i> Lokasi
+                                    Kunjungan<span></span></label>
+                            </ul>
+                            <ul class="field check-round slide"
+                                style="font-family: 'Roboto', sans-serif; font-size: 12px;">
+                                <input type="checkbox" name="batasdesa" id="batasdesa" class="admin">
+                                <label for="batasdesa" style="margin-top: -15px;"><i class='fa fa-square'
+                                        style='color:white; border: 1px solid #e2e2e2'></i> Batas
+                                    Desa<span></span></label>
+                            </ul>
+                        </ul>
+                    </li>
+
+                    <li
+                        style="padding-top: 10px;padding-bottom: 10px;width: 295px; padding-top: 5px; border-bottom: 1px solid #def0e8 ">
+                        <a href="#homeSubmenu8" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle cool-link"
+                            style='font-family: "Roboto", sans-serif; font-size: 12px; font-weight: bold; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>IZIN
+                            KAWASAN <i class="fa fa-caret-down"></i></a>
+                        <ul class="active list-unstyled" id="homeSubmenu8">
+                            <li class="field check-round slide" style="margin-bottom: -33px">
+                                <input type="checkbox" name="select-all4" id="select-all4" />
+                                <label for="select-all4" style="font-size: 12px; font-family: " Roboto";">Semua Layer
+                                    Kawasan<span></span></label>
+                            </li>
+                            <ul class="field check-round slide" style="padding-top: 10px;margin-bottom: -26px">
+                                <input type="checkbox" name="hd" id="hd" class="izinkawasan" />
+                                <label for="hd" style="margin-top: 10px;margin-bottom: 20px;"><i class='fa fa-square'
+                                        style='color:white; border: 1px solid #FF00FF;'></i> Izin
+                                    HPHD<span></span></label>
+                            </ul>
+                        </ul>
+                    </li>
+                    <!-- <li style="padding-top: 10px;padding-bottom: 15px;width: 295px;border-bottom: 1px solid #def0e8 ">
+              <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle cool-link"
+                style='font-family: "Roboto", sans-serif; font-size: 12px; font-weight: bold; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>PERLINDUNGAN
+                - PENGAMANAN HUTAN <i class="fa fa-caret-down"></i></a>
+              <ul class="active list-unstyled" id="homeSubmenu1">
+                <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle cool-link"
+                  style='font-family: "Roboto", sans-serif; font-size: 12px; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>Monitoring
+                  Deforestasi Tahun 2019 <i class="fa fa-caret-down"></i></a>
+                <ul class="active" id="homeSubmenu2" style="padding-left: 1px">
+                  <li class="field check-round slide" style="margin-bottom: -33px">
+                    <input type="checkbox" name="select-all2" id="select-all2" />
+                    <label for="select-all2" style="font-size: 12px; font-family: " Roboto";">Semua Layer Monitoring
+                      (2019) <span></span></label>
+                  </li>
+                  <ul class="field check-round slide" style="padding-top: 10px;">
+                    <input type="checkbox" name="jan" id="jan" class="monitdef19">
+                    <label for="jan" style="margin-top: 8px"><i class='fa fa-square' style='color:red;'></i>
+                      Januari<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style="">
+                    <input type="checkbox" name="select-all3" id="feb" class="monitdef19" />
+                    <label for="feb" style="margin-top: -15px;"><i class='fa fa-square' style='color:red;'></i>
+                      Februari<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style="">
+                    <input type="checkbox" name="mar" id="mar" class="monitdef19" />
+                    <label for="mar" style="margin-top: -15px;"><i class='fa fa-square' style='color:red;'></i>
+                      Maret<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style="">
+                    <input type="checkbox" name="apr" id="apr" class="monitdef19" />
+                    <label for="apr" style="margin-top: -15px;"><i class='fa fa-square' style='color:red;'></i>
+                      April<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style="">
+                    <input type="checkbox" name="mei" id="mei" class="monitdef19" />
+                    <label for="mei" style="margin-top: -15px;"><i class='fa fa-square' style='color:red;'></i>
+                      Mei<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style="">
+                    <input type="checkbox" name="jun" id="jun" class="monitdef19" />
+                    <label for="jun" style="margin-top: -15px;"><i class='fa fa-square' style='color:red;'></i>
+                      Juni<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style="">
+                    <input type="checkbox" name="jul" id="jul" class="monitdef19" />
+                    <label for="jul" style="margin-top: -15px;"><i class='fa fa-square' style='color:red;'></i>
+                      Juli<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style="">
+                    <input type="checkbox" name="agust" id="agust" class="monitdef19" />
+                    <label for="agust" style="margin-top: -15px;"><i class='fa fa-square' style='color:red;'></i>
+                      Agustus<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style="">
+                    <input type="checkbox" name="sept" id="sept" class="monitdef19" />
+                    <label for="sept" style="margin-top: -15px;margin-bottom: 0px;"><i class='fa fa-square'
+                        style='color:red;'></i> September<span></span></label>
+                  </ul>
+                </ul>
+                <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle cool-link"
+                  style='font-family: "Roboto", sans-serif; font-size: 12px; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>Monitoring
+                  Deforestasi Tahun 2018 <i class="fa fa-caret-down"></i></a>
+                <ul class="collapse list-unstyled" id="homeSubmenu4">
+                  <li class="field check-round slide" style="margin-bottom: -33px">
+                    <input type="checkbox" name="select-all3" id="select-all3" />
+                    <label for="select-all3" style="font-size: 12px; font-family: " Roboto";">Semua Layer Monitoring
+                      (2018)<span></span></label>
+                  </li>
+                  <ul class="field check-round slide" style="padding-top: 10px;">
+                    <input type="checkbox" name="def18" id="def18" class="monitdef18" />
+                    <label for="def18" style="margin-top: 10px;margin-bottom: 0px;  "><i class='fa fa-square'
+                        style='color:blue;'></i> 2017 - 2018<span></span></label>
+                  </ul>
+                </ul>
+                <a href="#homeSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle cool-link"
+                  style='font-family: "Roboto", sans-serif; font-size: 12px; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>Monitoring
+                  Muka Air Gambut Tahun 2019 <i class="fa fa-caret-down"></i></a>
+                <ul class="collapse list-unstyled" id="homeSubmenu5">
+                  <li class="field check-round slide" style="margin-bottom: -33px">
+                    <input type="checkbox" name="select-allmonitgbt" id="select-allmonitgbt" />
+                    <label for="select-allmonitgbt" style="font-size: 12px; font-family: " Roboto";">Semua Layer Gambut
+                      (2019)<span></span></label>
+                  </li>
+                  <ul class="field check-round slide" style="padding-top: 10px;">
+                    <input type="checkbox" name="julgbt" id="julgbt" class="monitgbt19" />
+                    <label for="julgbt" style="margin-top: 10px;"><img src="icon/monitgbt.png" alt="monitgbt"
+                        style="width:11px; height:11px; margin-bottom:2px;"> Juli<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style="">
+                    <input type="checkbox" name="agustgbt" id="agustgbt" class="monitgbt19" />
+                    <label for="agustgbt" style="margin-top: -15px;"><img src="icon/monitgbt.png" alt="monitgbt"
+                        style="width:11px; height:11px; margin-bottom:2px;"> Agustus<span></span></label>
+                  </ul>
+                  <ul class="field check-round slide" style=";margin-bottom: -23px;">
+                    <input type="checkbox" name="septgbt" id="septgbt" class="monitgbt19" />
+                    <label for="septgbt" style="margin-top: -15px;margin-bottom: 15px;"><img src="icon/monitgbt.png"
+                        alt="monitgbt" style="width:11px; height:11px; margin-bottom:2px;">
+                      September<span></span></label>
+                  </ul>
+                </ul>
+              </ul>
+            </li> -->
+                    <li
+                        style="padding-top: 10px;padding-bottom: 10px;width: 295px; padding-top: 5px; border-bottom: 1px solid #def0e8 ">
+                        <a href="#homeSubmenu6" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle cool-link"
+                            style='font-family: "Roboto", sans-serif; font-size: 12px; font-weight: bold; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>HIDROLOGI
+                            <i class="fa fa-caret-down"></i></a>
+                        <ul class="active list-unstyled" id="homeSubmenu6">
+                            <li class="field check-round slide" style="margin-bottom: -33px">
+                                <input type="checkbox" name="select-allhidrologi" id="select-allhidrologi" />
+                                <label for="select-allhidrologi" style="font-size: 12px; font-family: " Roboto";">Semua
+                                    Layer
+                                    Hidrologi<span></span></label>
+                            </li>
+                            <ul class="field check-round slide"
+                                style="margin-top:-38px; font-family: 'Roboto', sans-serif; font-size: 12px; margin-bottom: -10px">
+                                <input type="checkbox" name="kanal" id="kanal" class="hidrologi" />
+                                <label for="kanal" style="margin-top: 28px;"><i class='fa fa-square'
+                                        style='color:#ff3300;'></i>
+                                    Kanal<span></span></label>
+                            </ul>
+                            <ul class="field check-round slide"
+                                style="margin-top:-38px; font-family: 'Roboto', sans-serif; font-size: 12px; margin-bottom: -10px">
+                                <input type="checkbox" name="sungaikecil" id="sungaikecil" class="hidrologi" />
+                                <label for="sungaikecil" style="margin-top: 28px;"><i class='fa fa-square'
+                                        style='color:#3396FF;'></i>
+                                    Sungai
+                                    Alam<span></span></label>
+                            </ul>
+
+                            <ul class="field check-round slide"
+                                style="margin-top:-38px; font-family: 'Roboto', sans-serif; font-size: 12px; margin-bottom: -10px">
+                                <input type="checkbox" name="khg" id="khg" class="hidrologi" />
+                                <label for="khg" style="margin-top: 28px;"><i class='fa fa-square'
+                                        style='color:#18E0A0;'></i>
+                                    Kesatuan Hidrologis Gambut (KHG)<span></span></label>
+                            </ul>
+                        </ul>
+                    </li>
+
+                    <!-- <li
+              style="padding-top: 10px;padding-bottom: 10px;width: 295px; padding-top: 5px; border-bottom: 1px solid #def0e8 ">
+              <a href="#homeSubmenukomoditi" data-toggle="collapse" aria-expanded="false"
+                class="dropdown-toggle cool-link"
+                style='font-family: "Roboto", sans-serif; font-size: 12px; font-weight: bold; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px;'>KOMODITI
+                HUTAN DESA <i class="fa fa-caret-down"></i></a>
+              <ul class="collapse list-unstyled" id="homeSubmenukomoditi">
+                <a href="#homeSubmenukomoditi1" data-toggle="collapse" aria-expanded="false"
+                  class="dropdown-toggle cool-link"
+                  style='font-family: "Roboto", sans-serif; font-size: 12px; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px;margin-right: 10px;'>Eksisting
+                  Komoditi Tahap Budidaya <i class="fa fa-caret-down"></i></a>
+                <ul class="collapse" id="homeSubmenukomoditi1" style="padding-left: 1px">
+                  <li class="field check-round slide" style="margin-bottom: -33px">
+                    <input type="checkbox" name="select-all2" id="select-all2" />
+                    <label for="select-all2" style="font-size: 12px; font-family: " Roboto";">Semua Layer Komoditi
+                      <span></span></label>
+                  </li>
+                  <ul class="field check-round slide" style="padding-top: 10px;margin-bottom: -10px;">
+                    <input type="checkbox" name="jan" id="jan" class="monitdef19">
+                    <label for="jan" style="margin-top: 10px;"><i class='fa fa-square' style='color:red;'></i> Lokasi
+                      Keramba Kepiting<span></span></label>
+                  </ul>
+                </ul>
+                <a href="#homeSubmenukomoditi2" data-toggle="collapse" aria-expanded="false"
+                  class="dropdown-toggle cool-link"
+                  style='font-family: "Roboto", sans-serif; font-size: 12px; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>Potensi
+                  Komoditi Hutan Desa <i class="fa fa-caret-down"></i></a>
+                <ul class="collapse list-unstyled" id="homeSubmenukomoditi2">
+                  <li class="field check-round slide" style="margin-bottom: -33px">
+                    <input type="checkbox" name="select-all3" id="select-all3" />
+                    <label for="select-all3" style="font-size: 12px; font-family: " Roboto";">Semua Layer Potensi
+                      Komoditi<span></span></label>
+                  </li>
+                  <ul class="field check-round slide" style="padding-top: 10px;margin-bottom: -23px;">
+                    <input type="checkbox" name="def18" id="def18" class="monitdef18" />
+                    <label for="def18" style="margin-top: 10px;margin-bottom: 15px;"><i class='fa fa-square'
+                        style='color:blue;'></i> Kebun Kelapa<span></span></label>
+                  </ul>
+                </ul>
+              </ul>
+            </li> -->
+
+                    <li
+                        style="padding-top: 10px;padding-bottom: 10px;width: 295px; padding-top: 5px; border-bottom: 1px solid #def0e8 ">
+                        <a href="#homeSubmenu7" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle cool-link"
+                            style='font-family: "Roboto", sans-serif; font-size: 12px; font-weight: bold; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>
+                            HUTAN DAN LAHAN <i class="fa fa-caret-down"></i></a>
+                        <ul class="active list-unstyled" id="homeSubmenu7">
+                            <a href="#homeSubmenuhotspot" data-toggle="collapse" aria-expanded="false"
+                                class="dropdown-toggle cool-link"
+                                style='font-family: "Roboto", sans-serif; font-size: 12px; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>Tutupan
+                                Hutan <i class="fa fa-caret-down"></i></a>
+                            <ul class="" id="homeSubmenuhotspot" style="padding-left: 1px;">
+                                <li class="field check-round slide" style="margin-bottom: -33px">
+                                    <input type="checkbox" name="select-allhutan" id="select-allhutan" />
+                                    <label for="select-allhutan" style="font-size: 12px; font-family: " Roboto";">Semua
+                                        Layer
+                                        Tutupan Hutan<span></span></label>
+                                </li>
+                                <ul class="field check-round slide" style="padding-top: 10px;">
+                                    <input type="checkbox" name="hlks" id="hlks" class="hutan" />
+                                    <label for="hlks" style="margin-top: 10px;"><i class='fa fa-square'
+                                            id="hlkscolor"></i> Hutan Lahan
+                                        Kering
+                                        Sekunder<span></span></label>
+                                </ul>
+                                <ul class="field check-round slide" style="padding-top: 10px;">
+                                    <input type="checkbox" name="hrs" id="hrs" class="hutan" />
+                                    <label for="hrs" style="margin-top: -23px;"><i class='fa fa-square' id="hrscolor"
+                                            style='color:#3900EA;'></i> Hutan Rawa Sekunder<span></span></label>
+                                </ul>
+                                <ul class="field check-round slide" style="padding-top: 10px;">
+                                    <input type="checkbox" name="hms" id="hms" class="hutan" />
+                                    <label for="hms" style="margin-top: -23px;"><i class='fa fa-square' id="hmscolor"
+                                            style='color:#3900EA;'></i> Hutan Mangrove Sekunder<span></span></label>
+                                </ul>
+                            </ul>
+                            <a href="#homeSubmenukarhutla" data-toggle="collapse" aria-expanded="false"
+                                class="dropdown-toggle cool-link"
+                                style='font-family: "Roboto", sans-serif; font-size: 12px; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>Non
+                                Tutupan Hutan <i class="fa fa-caret-down"></i></a>
+                            <ul class="" id="homeSubmenukarhutla" style="padding-left: 1px">
+                                <li class="field check-round slide" style="margin-bottom: -33px">
+                                    <input type="checkbox" name="select-allnonhutan" id="select-allnonhutan" />
+                                    <label for="select-allnonhutan" style="font-size: 12px; font-family: "
+                                        Roboto";">Semua Layer
+                                        Non Tutupan Hutan<span></span></label>
+                                </li>
+                                <ul class="field check-round slide" style="padding-top: 10px;">
+                                    <input type="checkbox" name="br" id="br" class="nonhutan" />
+                                    <label for="br" style="margin-top: 10px;"><i class='fa fa-square' id="brcolor" '></i>
+                    Belukar<span></span></label>
+                </ul>
+                <ul class="field check-round slide" style="padding-top: 10px;">
+                  <input type="checkbox" name="kbn" id="kbn" class="nonhutan" />
+                  <label for="kbn" style="margin-top: -23px;"><i class=' fa fa-square' id="kbncolor" '></i>
+                    Perkebunan<span></span></label>
+                </ul>
+                <ul class="field check-round slide" style="padding-top: 10px;">
+                  <input type="checkbox" name="plk" id="plk" class="nonhutan" />
+                  <label for="plk" style="margin-top: -23px;"><i class=' fa fa-square' id="plkcolor" '></i>
+                    Pertanian Lahan Kering<span></span></label>
+                </ul>
+                <ul class="field check-round slide" style="padding-top: 10px;">
+                  <input type="checkbox" name="pmk" id="pmk" class="nonhutan" />
+                  <label for="pmk" style="margin-top: -23px;"><i class=' fa fa-square' id="pmkcolor" '></i>
+                    Pemukiman<span></span></label>
+                </ul>
+                <ul class="field check-round slide" style="margin-top: -12px">
+                  <input type="checkbox" name="raw" id="raw" class="nonhutan" />
+                  <label for="raw" style=""><i class=' fa fa-square' id="rawcolor" '></i>
+                    Rawa<span></span></label>
+                </ul>
+                <ul class="field check-round slide" style="padding-top: 10px;">
+                  <input type="checkbox" name="sb" id="sb" class="nonhutan" />
+                  <label for="sb" style="margin-top: -23px;"><i class=' fa fa-square' id="sbcolor" '></i>
+                    Semak Belukar<span></span></label>
+                </ul>
+                <ul class="field check-round slide" style="padding-top: 10px;">
+                  <input type="checkbox" name="swh" id="swh" class="nonhutan" />
+                  <label for="swh" style="margin-top: -23px;"><i class=' fa fa-square' id="swhcolor" '></i>
+                    Sawah<span></span></label>
+                </ul>
+                <ul class="field check-round slide" style="padding-top: 10px;">
+                  <input type="checkbox" name="ta" id="ta" class="nonhutan" />
+                  <label for="ta" style="margin-top: -23px;"><i class=' fa fa-square' id="tacolor" '></i> Tubuh
+                    Air<span></span></label>
+                </ul>
+                <ul class="field check-round slide" style="padding-top: 10px;">
+                  <input type="checkbox" name="tbk" id="tbk" class="nonhutan" />
+                  <label for="tbk" style="margin-top: -23px;"><i class=' fa fa-square' id="tbkcolor" '></i>
+                    Tambak<span></span></label>
+                </ul>
+                <ul class="field check-round slide" style="padding-top: 10px; margin-bottom: -26px">
+                  <input type="checkbox" name="tt" id="tt" class="nonhutan" />
+                  <label for="tt" style="margin-top: -23px;margin-bottom: 20px;"><i class=' fa fa-square'
+                                            id="ttcolor"></i> Tanah Terbuka<span></span></label>
+                                </ul>
+
+                                <a href="#homeSubmenukarhutla" data-toggle="collapse" aria-expanded="false"
+                                    class="dropdown-toggle cool-link"
+                                    style='font-family: "Roboto", sans-serif; font-size: 12px; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px;margin-top: 18px;'>Kelas
+                                    Lereng <i class="fa fa-caret-down"></i></a>
+                                <ul class="" id="homeSubmenukarhutla" style="padding-left: 1px">
+                                    <li class="field check-round slide" style="margin-bottom: -33px">
+                                        <input type="checkbox" name="select-alllereng" id="select-alllereng" />
+                                        <label for="select-alllereng" style="font-size: 12px; font-family: "
+                                            Roboto";">Semua Layer
+                                            Kelas Lereng<span></span></label>
+                                    </li>
+                                    <ul class="field check-round slide" style="padding-top: 10px;">
+                                        <input type="checkbox" name="datar" id="datar" class="lereng" />
+                                        <label for="datar" style="margin-top: 10px;"><i class='fa fa-square'
+                                                style='color:#39FF33'></i>
+                                            Datar <span></span></label>
+                                    </ul>
+                                    <ul class="field check-round slide" style="padding-top: 10px;">
+                                        <input type="checkbox" name="sangatlandai" id="sangatlandai" class="lereng" />
+                                        <label for="sangatlandai" style="margin-top: -23px;"><i class='fa fa-square'
+                                                style='color:#33FFA2;'></i> Sangat Landai<span></span></label>
+                                    </ul>
+                                    <ul class="field check-round slide" style="padding-top: 10px;">
+                                        <input type="checkbox" name="landai" id="landai" class="lereng" />
+                                        <label for="landai" style="margin-top: -23px;"><i class='fa fa-square'
+                                                style='color:#FFCE33;'></i>
+                                            Landai<span></span></label>
+                                    </ul>
+                                    <ul class="field check-round slide" style="padding-top: 10px;">
+                                        <input type="checkbox" name="agakcuram" id="agakcuram" class="lereng" />
+                                        <label for="agakcuram" style="margin-top: -23px;"><i class='fa fa-square'
+                                                style='color:#FF9933;'></i>
+                                            Agak Curam<span></span></label>
+                                    </ul>
+                                    <ul class="field check-round slide" style="margin-top: -12px">
+                                        <input type="checkbox" name="curam" id="curam" class="lereng" />
+                                        <label for="curam" style=""><i class='fa fa-square' style='color:#FF6133;'></i>
+                                            Curam<span></span></label>
+                                    </ul>
+                                    <ul class="field check-round slide" style="padding-top: 10px;">
+                                        <input type="checkbox" name="sangatcuram" id="sangatcuram" class="lereng" />
+                                        <label for="sangatcuram" style="margin-top: -23px;"><i class='fa fa-square'
+                                                style='color:#FF3333;'></i> Sangat Curam<span></span></label>
+                                    </ul>
+                                    <ul class="field check-round slide" style="padding-top: 10px; margin-bottom: -26px">
+                                        <input type="checkbox" name="extracuram" id="extracuram" class="lereng" />
+                                        <label for="extracuram" style="margin-top: -23px;margin-bottom: 20px;"><i
+                                                class='fa fa-square' style='color:#4C33FF;'></i> Ekstra
+                                            Curam<span></span></label>
+                                    </ul>
+                                </ul>
+                            </ul>
+                    </li>
+
+                    <a href="#homeSubmenukarhutla" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle cool-link"
+                        style='font-family: "Roboto", sans-serif; font-size: 12px; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px;margin-top: 18px;'>Jenis
+                        Tanah <i class="fa fa-caret-down"></i></a>
+                    <ul class="" id="homeSubmenukarhutla" style="padding-left: 1px">
+                        <li class="field check-round slide" style="margin-bottom: -33px">
+                            <input type="checkbox" name="select-alltanah" id="select-alltanah" />
+                            <label for="select-alltanah" style="font-size: 12px; font-family: " Roboto";">Semua Layer
+                                Jenis Tanah<span></span></label>
+                        </li>
+                        <ul class="field check-round slide" style="padding-top: 10px;">
+                            <input type="checkbox" name="hs" id="hs" class="tanah" />
+                            <label for="hs" style="margin-top: 10px;"><i class='fa fa-square'
+                                    style='color:#3900EA;'></i>
+                                Haplic Sulfaquents <span></span></label>
+                        </ul>
+                        <ul class="field check-round slide" style="padding-top: 10px;">
+                            <input type="checkbox" name="sf" id="sf" class="tanah" />
+                            <label for="sf" style="margin-top: -23px;"><i class='fa fa-square'
+                                    style='color:#1D8FE3;'></i>
+                                Sulfic Fluvaquents<span></span></label>
+                        </ul>
+                        <ul class="field check-round slide" style="padding-top: 10px;">
+                            <input type="checkbox" name="th" id="th" class="tanah" />
+                            <label for="th" style="margin-top: -23px;"><i class='fa fa-square'
+                                    style='color:#E018BC;'></i>
+                                Typic Haplohemists<span></span></label>
+                        </ul>
+                        <ul class="field check-round slide" style="padding-top: 10px;">
+                            <input type="checkbox" name="tk" id="tk" class="tanah" />
+                            <label for="tk" style="margin-top: -23px;"><i class='fa fa-square'
+                                    style='color:#A018E0;'></i>
+                                Typic Kandiudults<span></span></label>
+                        </ul>
+                        <ul class="field check-round slide" style="margin-top: -12px">
+                            <input type="checkbox" name="tq" id="tq" class="tanah" />
+                            <label for="tq" style=""><i class='fa fa-square' style='color:#3900EA;'></i>
+                                Typic Quartzipsamments<span></span></label>
+                        </ul>
+                        <ul class="field check-round slide" style="padding-top: 10px; margin-bottom: -26px">
+                            <input type="checkbox" name="ts" id="ts" class="tanah" />
+                            <label for="ts" style="margin-top: -23px;margin-bottom: 20px;"><i class='fa fa-square'
+                                    style='color:#18E0A0;'></i> Typic Sulfaquents<span></span></label>
+                        </ul>
+                    </ul>
+                </ul>
+                </li>
+
+                <!-- <li
+            style="padding-top: 10px;padding-bottom: 10px;width: 295px; padding-top: 5px; border-bottom: 1px solid #def0e8 ">
+            <a href="#homeSubmenuwpk" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle cool-link"
+              style='font-family: "Roboto", sans-serif; font-size: 12px; font-weight: bold; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>PENGUKURAN
+              KINERJA REDD+ <i class="fa fa-caret-down"></i></a>
+            <ul class="collapse list-unstyled" id="homeSubmenuwpk">
+              <li class="field check-round slide" style="margin-bottom: -33px">
+                <input type="checkbox" name="select-all4" id="select-allwpk" />
+                <label for="select-allwpk" style="font-size: 12px; font-family: " Roboto";">Semua Layer
+                  Kawasan<span></span></label>
+              </li>
+              <ul class="field check-round slide" style="padding-top: 10px;margin-bottom: -26px">
+                <input type="checkbox" name="wpk" id="wpk" class="wpk" />
+                <label for="wpk" style="margin-top: 10px;margin-bottom: 20px;"><i class='fa fa-square'
+                    style='color:#c3c6bb;'></i> WPK REDD+<span></span></label>
+              </ul>
+            </ul>
+          </li> -->
+
+                <li
+                    style="padding-top: 10px;padding-bottom: 10px;width: 295px; padding-top: 5px; border-bottom: 1px solid #def0e8 ">
+                    <a href="#homeSubmenu9" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle cool-link"
+                        style='font-family: "Roboto", sans-serif; font-size: 12px; font-weight: bold; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>KAWASAN
+                        HUTAN <i class="fa fa-caret-down"></i></a>
+                    <ul class="active list-unstyled" id="homeSubmenu9">
+                        <li class="field check-round slide" style="margin-bottom: -33px">
+                            <input type="checkbox" name="select-all5" id="select-all5" />
+                            <label for="select-all5" style="font-size: 12px; font-family: " Roboto";">Semua Layer
+                                Kawasan
+                                Hutan<span></span></label>
+                        </li>
+                        <ul class="field check-round slide" style="padding-top: 10px;">
+                            <input type="checkbox" name="hl" id="hl" class="kawasanhutan" />
+                            <label for="hl" style="margin-top: 10px;"><i class='fa fa-square'
+                                    style='color:#00cc00;'></i> Hutan
+                                Lindung<span></span></label>
+                        </ul>
+                        <ul class="field check-round slide" style="padding-top: 10px;">
+                            <input type="checkbox" name="hpt" id="hpt" class="kawasanhutan" />
+                            <label for="hpt" style="margin-top: -23px;"><i class='fa fa-square'
+                                    style='color:#ccff33;'></i> Hutan
+                                Produksi Terbatas<span></span></label>
+                        </ul>
+                        <ul class="field check-round slide" style="padding-top: 10px;">
+                            <input type="checkbox" name="hpk" id="hpk" class="kawasanhutan" />
+                            <label for="hpk" style="margin-top: -23px;"><i class='fa fa-square'
+                                    style='color:#ff00ff;'></i> Hutan
+                                Produksi Konversi<span></span></label>
+                        </ul>
+                        <ul class="field check-round slide" style="padding-top: 10px; margin-bottom: -26px">
+                            <input type="checkbox" name="hp" id="hp" class="kawasanhutan" />
+                            <label for="hp" style="margin-top: -23px;margin-bottom: 20px;"><i class='fa fa-square'
+                                    style='color:#ffff00;'></i> Hutan Produksi<span></span></label>
+                        </ul>
+                    </ul>
+                </li>
+                <!-- <li
+            style="padding-top: 10px;padding-bottom: 10px;width: 295px; padding-top: 5px; border-bottom: 1px solid #def0e8 ">
+            <a href="#homeSubmenu10" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle cool-link"
+              style='font-family: "Roboto", sans-serif; font-size: 12px; font-weight: bold; color: #000;font-family: "Roboto", sans-serif;margin-bottom: -17px'>TUTUPAN
+              HUTAN (2017) <i class="fa fa-caret-down"></i></a>
+            <ul class="collapse list-unstyled" id="homeSubmenu10">
+              <li class="field check-round slide" style="margin-bottom: -33px">
+                <input type="checkbox" name="select-all6" id="select-all6" />
+                <label for="select-all6" style="font-size: 12px; font-family: " Roboto";";>Semua Layer Tutupan
+                  Hutan<span></span></label>
+              </li>
+              <ul class="field check-round slide" style="padding-top: 10px;">
+                <input type="checkbox" name="hlks" id="hlks" class="tutupanhutan" />
+                <label for="hlks" style="margin-top: 10px;"><i class='fa fa-square' style='color:#66ff33;'></i> Hutan
+                  Lahan Kering Sekunder<span></span></label>
+              </ul>
+              <ul class="field check-round slide" style="padding-top: 10px;">
+                <input type="checkbox" name="hms" id="hms" class="tutupanhutan" />
+                <label for="hms" style="margin-top: -23px;"><i class='fa fa-square' style='color:#ff9900;'></i> Hutan
+                  Mangrove Sekunder<span></span></label>
+              </ul>
+              <ul class="field check-round slide" style="padding-top: 10px;">
+                <input type="checkbox" name="hrs" id="hrs" class="tutupanhutan" />
+                <label for="hrs" style="margin-top: -23px;margin-bottom: -5px;"><i class='fa fa-square'
+                    style='color:#6b6b47;'></i> Hutan Rawa Sekunder<span></span></label>
+              </ul>
+            </ul> -->
+
+                <li style="margin-left: 15px;width: 295px; padding-top: 20px; padding-bottom: 10px;"><a
+                        style='font-family: "Roboto", sans-serif; font-size: 14px;font-weight: 700;  width: 262px; border-bottom: 1.5px solid #3b5998; width: 262px;color: #000'>BASE
+                        MAP </a>
+                </li>
+
+
+                <li>
+                    <div id="wrapper" class="article">
+                        <select id="basemaps"
+                            style="width: 92%; height:30px;margin-left: 15px;margin-right: 15px;border: 1.5px solid #3b5998; font-size: 12px; font-weight: bold;font-family:"
+                            Roboto", sans-serif;">
+                            <option value="Topographic">Topographic</option>
+                            <option value="Streets">Streets</option>
+                            <option value="Oceans">Oceans</option>
+                            <option value="Gray">Gray</option>
+                            <option value="DarkGray">Dark Gray</option>
+                            <option value="Imagery">Imagery</option>
+                        </select>
+                    </div>
+                </li>
+
+            </ul>
+
+    </div>
+
+
+    <div id="map"></div>
+
+    <nav id="menu" class="basemap-wrapper-zoom">
+        <button type="button" id="fly" class="btn btn-info border-btn">
+            <span><i class="material-icons v2">zoom_out_map</i></span>
+        </button>
+        <script>
+            document.getElementById('fly').addEventListener('click', function () {
+                map.flyTo([-0.76, 109.54], 11)
+            });
+        </script>
+    </nav>
+    </section>
+    <script>
+        $(document).ready(function () {
+            $("#select-all").click(function () {
+                $(".admin").prop("checked", this.checked);
+            });
+
+            $('.admin').click(function () {
+                if ($('.admin:checked').length == $('.admin').length) {
+                    $('#select-all').prop('checked', true);
+
+                } else {
+                    $('#select-all').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-all").click(function () {
+                $(".admin").prop("checked", this.checked);
+            });
+
+            $('.admin').click(function () {
+                if ($('.admin:checked').length == $('.admin').length) {
+                    $('#select-all').prop('checked', true);
+
+                } else {
+                    $('#select-all').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-all2").click(function () {
+                $(".monitdef19").prop("checked", this.checked);
+            });
+
+            $('.monitdef19').click(function () {
+                if ($('.monitdef19:checked').length == $('.monitdef19').length) {
+                    $('#select-all2').prop('checked', true);
+                } else {
+                    $('#select-all2').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-all3").click(function () {
+                $(".monitdef18").prop("checked", this.checked);
+            });
+
+            $('.monitdef18').click(function () {
+                if ($('.monitdef18:checked').length == $('.monitdef18').length) {
+                    $('#select-all3').prop('checked', true);
+                } else {
+                    $('#select-all3').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-allmonitgbt").click(function () {
+                $(".monitgbt19").prop("checked", this.checked);
+            });
+
+            $('.monitgbt19').click(function () {
+                if ($('.monitgbt19:checked').length == $('.monitgbt19').length) {
+                    $('#select-allmonitgbt').prop('checked', true);
+                } else {
+                    $('#select-allmonitgbt').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-allplot").click(function () {
+                $(".plot").prop("checked", this.checked);
+            });
+
+            $('.plot').click(function () {
+                if ($('.plot:checked').length == $('.plot').length) {
+                    $('#select-allplot').prop('checked', true);
+                } else {
+                    $('#select-allplot').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-allhotspot").click(function () {
+                $(".karhutla").prop("checked", this.checked);
+            });
+
+            $('.karhutla').click(function () {
+                if ($('.karhutla:checked').length == $('.karhutla').length) {
+                    $('#select-allhotspot').prop('checked', true);
+                } else {
+                    $('#select-allhotspot').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-all4").click(function () {
+                $(".izinkawasan").prop("checked", this.checked);
+            });
+
+            $('.izinkawasan').click(function () {
+                if ($('.izinkawasan:checked').length == $('.izinkawasan').length) {
+                    $('#select-all4').prop('checked', true);
+                } else {
+                    $('#select-all4').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-all5").click(function () {
+                $(".kawasanhutan").prop("checked", this.checked);
+            });
+
+            $('.kawasanhutan').click(function () {
+                if ($('.kawasanhutan:checked').length == $('.kawasanhutan').length) {
+                    $('#select-all5').prop('checked', true);
+                } else {
+                    $('#select-all5').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-allhutan").click(function () {
+                $(".hutan").prop("checked", this.checked);
+            });
+
+            $('.hutan').click(function () {
+                if ($('.hutan:checked').length == $('.hutan').length) {
+                    $('#select-all6').prop('checked', true);
+
+                } else {
+                    $('#select-allhutan').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-allhotspot").click(function () {
+                $(".karhutla").prop("checked", this.checked);
+            });
+
+            $('.karhutla').click(function () {
+                if ($('.karhutla:checked').length == $('.karhutla').length) {
+                    $('#select-allhotspot').prop('checked', true);
+
+                } else {
+                    $('#select-allhotspot').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-allkarhutla").click(function () {
+                $(".karhutla2").prop("checked", this.checked);
+            });
+
+            $('.karhutla2').click(function () {
+                if ($('.karhutla2:checked').length == $('.karhutla2').length) {
+                    $('#select-allkarhutla').prop('checked', true);
+
+                } else {
+                    $('#select-allkarhutla').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-allwpk").click(function () {
+                $(".wpk").prop("checked", this.checked);
+            });
+
+            $('.wpk').click(function () {
+                if ($('.wpk:checked').length == $('.wpk').length) {
+                    $('#select-allwpk').prop('checked', true);
+
+                } else {
+                    $('#select-allwpk').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-allhidrologi").click(function () {
+                $(".hidrologi").prop("checked", this.checked);
+            });
+
+            $('.hidrologi').click(function () {
+                if ($('.hidrologi:checked').length == $('.hidrologi').length) {
+                    $('#select-allhidrologi').prop('checked', true);
+
+                } else {
+                    $('#select-allhidrologi').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-allnonhutan").click(function () {
+                $(".nonhutan").prop("checked", this.checked);
+            });
+
+            $('.nonhutan').click(function () {
+                if ($('.nonhutan:checked').length == $('.nonhutan').length) {
+                    $('#select-allnonhutan').prop('checked', true);
+
+                } else {
+                    $('#select-allnonhutan').prop('checked', false);
+                }
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#select-alllereng").click(function () {
+                $(".lereng").prop("checked", this.checked);
+            });
+
+            $('.lereng').click(function () {
+                if ($('.lereng:checked').length == $('.lereng').length) {
+                    $('#select-alllereng').prop('checked', true);
+
+                } else {
+                    $('#select-alllereng').prop('checked', false);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $("#select-alltanah").click(function () {
+                $(".tanah").prop("checked", this.checked);
+            });
+
+            $('.tanah').click(function () {
+                if ($('.tanah:checked').length == $('.tanah').length) {
+                    $('#select-alltanah').prop('checked', true);
+
+                } else {
+                    $('#select-alltanah').prop('checked', false);
+                }
+            });
+        });
+    </script>
+
+
+    <!-- jQuery Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- VIDEO BG PLUGINS -->
+    <script src="js/videobg.js"></script>
+
+</body>
+
+<script>
+    var modal = document.getElementById("responsive-sidebar");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("button-legend-layout");
+
+    // Get the <span> element that closes the modal
+    var arrDown = document.getElementById("arrDown");
+    var arrUp = document.getElementById("arrUp");
+
+    var span = document.getElementsByClassName("button-close-sidenav")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+        arrUp.style.display = "block";
+        arrDown.style.display = "none";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+        arrDown.style.display = "block";
+        arrUp.style.display = "none";
+    }
+
+    var map = L.map('map').setView([-0.76, 109.54], 11);
+    var layer = L.esri.basemapLayer('Topographic').addTo(map);
+    var layerLabels;
+
+    function setBasemap(basemap) {
+        if (layer) {
+            map.removeLayer(layer);
+        }
+
+        layer = L.esri.basemapLayer(basemap);
+
+        map.addLayer(layer);
+
+        if (layerLabels) {
+            map.removeLayer(layerLabels);
+        }
+
+        if (
+            basemap === 'ShadedRelief' ||
+            basemap === 'Oceans' ||
+            basemap === 'Gray' ||
+            basemap === 'DarkGray' ||
+            basemap === 'Terrain'
+        ) {
+            layerLabels = L.esri.basemapLayer(basemap + 'Labels');
+            map.addLayer(layerLabels);
+        } else if (basemap.includes('Imagery')) {
+            layerLabels = L.esri.basemapLayer('ImageryLabels');
+            map.addLayer(layerLabels);
+        }
+    }
+
+    document
+        .querySelector('#basemaps')
+        .addEventListener('change', function (e) {
+            var basemap = e.target.value;
+            setBasemap(basemap);
+        });
+
+    var stylejalan = {
+        "color": "#ff3300",
+        "weight": 0.5,
+        "opacity": 0.6
+    };
+
+    var lanskap = {
+        "color": "#9999ff",
+        "weight": 2,
+        "opacity": 0.6
+    };
+
+
+    var myStyle = {
+        "color": "#e2e2e2",
+        "weight": 1.5,
+        "opacity": 0.6
+    };
+
+    var stylemintoring = {
+        "color": "#ff3300",
+        "weight": 1.5,
+        "opacity": 0.8,
+    };
+    var stylemintoring18 = {
+        "color": "#0000ff",
+        "weight": 1.5,
+        "opacity": 0.8,
+    };
+    var stylehd = {
+        "color": "#FF00FF",
+        "weight": 1,
+        "opacity": 0.8,
+    };
+    var stylehl = {
+        "color": "#00cc00",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    var stylehpt = {
+        "color": "#ccff33",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    var stylehpk = {
+        "color": "#ff00ff",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    var stylehp = {
+        "color": "#ffff00",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    var stylehutan1 = {
+        "color": "#66ff33",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("hlkscolor").style.color = "#66ff33";
+
+    var stylehutan2 = {
+        "color": "#ff9900",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+
+    document.getElementById("hrscolor").style.color = "#6b6b47";
+    var stylehutan3 = {
+        "color": "#6b6b47",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("hmscolor").style.color = "#ff9900";
+    var styleplot = {
+        "color": "#000",
+        "weight": 1,
+        "opacity": 0,
+    };
+
+    var stylekarhutla15 = {
+        "color": "#18E0A0",
+        "weight": 0.5,
+        "opacity": 50,
+    };
+    var stylekarhutla16 = {
+        "color": "#A018E0",
+        "weight": 0.5,
+        "opacity": 50,
+    };
+
+    var stylekarhutla17 = {
+        "color": "#E018BC",
+        "weight": 0.5,
+        "opacity": 50,
+    };
+
+    var stylekarhutla18 = {
+        "color": "#1D8FE3",
+        "weight": 0.5,
+        "opacity": 50,
+    };
+
+    var stylekarhutla19 = {
+        "color": "#3900EA",
+        "weight": 0.5,
+        "opacity": 50,
+    };
+
+    var stylesungai = {
+        "color": "#3396FF",
+        "weight": 0.5,
+        "opacity": 50,
+    };
+
+    var stylekanal = {
+        "color": "#ff3300",
+        "weight": 0.5,
+        "opacity": 50,
+    };
+
+    var stylekhg = {
+        "color": "#18E0A0",
+        "weight": 0.5,
+        "opacity": 50,
+    };
+
+    var styledatar = {
+        "color": "#39FF33",
+        "weight": 0.5,
+        "opacity": 0,
+    };
+
+    var stylesangatlandai = {
+        "color": "#33FFA2",
+        "weight": 1,
+        "opacity": 0.5,
+    };
+    var stylelandai = {
+        "color": "#FFCE33",
+        "weight": 1,
+        "opacity": 0.5,
+    };
+
+    var styleagakcuram = {
+        "color": "#FF9933",
+        "weight": 1,
+        "opacity": 0.5,
+    };
+
+    var stylecuram = {
+        "color": "#FF6133",
+        "weight": 1,
+        "opacity": 0.5,
+    };
+
+    var stylesangatcuram = {
+        "color": "#FF3333",
+        "weight": 1,
+        "opacity": 0.5,
+    };
+
+    var styleekstracuram = {
+        "color": "#4C33FF",
+        "weight": 1,
+        "opacity": 0.5,
+    };
+
+    var stylebr = {
+        "color": "#e0b79f",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("brcolor").style.color = "#e0b79f";
+
+    var stylekbn = {
+        "color": " #e5d298",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("kbncolor").style.color = "#e5d298";
+
+    var styleplk = {
+        "color": "#edf501",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("plkcolor").style.color = "#edf501";
+
+    var stylepmk = {
+        "color": "#000",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("pmkcolor").style.color = "#000";
+
+    var styleraw = {
+        "color": "#97e5e5",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("rawcolor").style.color = "#97e5e5";
+
+    var stylesb = {
+        "color": "  #ff975c",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("sbcolor").style.color = "  #ff975c";
+
+    var styleswh = {
+        "color": "#b4d6fc",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("swhcolor").style.color = "#b4d6fc";
+
+    var styleta = {
+        "color": "#eafcfe",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("tacolor").style.color = "#eafcfe";
+
+    var styletbk = {
+        "color": "#7cf4f3",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("tbkcolor").style.color = "#7cf4f3";
+
+    var stylett = {
+        "color": "#d80b82",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+    document.getElementById("ttcolor").style.color = "#d80b82";
+
+    var stylehs = {
+        "color": "#3900ea",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+
+    var stylesf = {
+        "color": "#1d8fe3",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+
+    var styleth = {
+        "color": "#e018bc",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+
+    var styletk = {
+        "color": "#a018e0",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+
+    var styletq = {
+        "color": "#3900ea",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+
+    var stylets = {
+        "color": "#18e0a0",
+        "weight": 1,
+        "opacity": 0.1,
+    };
+
+    var stylelokasikunjungan = {
+        "color": "#18e0a0",
+        "weight": 4,
+        "opacity": 0.4,
+    };
+
+    function popUp(f, l) {
+        var out = [];
+        if (f.properties) {
+            for (key in f.properties) {
+                out.push(key + ": " + f.properties[key]);
+            }
+            l.bindPopup(out.join("<br />"));
+        }
+    }
+
+
+    // // var jalan = new L.GeoJSON.AJAX(["json4//jalan/jalan.geojson"], {
+    // //   style: stylejalan
+    // // })
+    // map.addLayer(jalan)
+
+    var lanskap = new L.GeoJSON.AJAX(["json4//lanskapline.geojson"], {
+        style: lanskap
+    })
+    map.addLayer(lanskap)
+
+    //FUNGSI CHECKBOX ADD DATA
+    var pusatdesa = new L.GeoJSON.AJAX(["json4/pusatdesafin.geojson"], {
+        onEachFeature: popUp,
+        style: myStyle
+    })
+
+    document.getElementById('pusatdesa').onclick = function () {
+        if (this.checked) {
+            map.addLayer(pusatdesa);
+        } else {
+            map.removeLayer(pusatdesa);
+        }
+    };
+
+    var desa = new L.GeoJSON.AJAX(["json4/batasdesaline2.geojson"], {
+        style: myStyle
+    })
+    document.getElementById('batasdesa').onclick = function () {
+        if (this.checked) {
+            map.addLayer(desa);
+        } else {
+            map.removeLayer(desa);
+        }
+    };
+
+    document.getElementById('select-all').onclick = function () {
+        if (this.checked) {
+            map.addLayer(pusatdesa);
+            map.addLayer(desa);
+        } else {
+            map.removeLayer(pusatdesa);
+            map.removeLayer(desa)
+        }
+    };
+
+    //MONITORING
+    //IZIN HPHD
+
+    //KAWASAN HUTAN
+    var hl = new L.GeoJSON.AJAX(["json4/kh/hl.geojson"], {
+        onEachFeature: popUp,
+        style: stylehl
+    })
+    document.getElementById('hl').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hl);
+        } else {
+            map.removeLayer(hl);
+        }
+    };
+
+    var hpt = new L.GeoJSON.AJAX(["json4/kh/hpt.geojson"], {
+        onEachFeature: popUp,
+        style: stylehpt
+    })
+    document.getElementById('hpt').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hpt);
+        } else {
+            map.removeLayer(hpt);
+        }
+    };
+
+    var hpk = new L.GeoJSON.AJAX(["json4/kh/hpk.geojson"], {
+        onEachFeature: popUp,
+        style: stylehpk
+    })
+    document.getElementById('hpk').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hpk);
+        } else {
+            map.removeLayer(hpk);
+        }
+    };
+
+    var hp = new L.GeoJSON.AJAX(["json4/kh/hp.geojson"], {
+        onEachFeature: popUp,
+        style: stylehp
+    })
+    document.getElementById('hp').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hp);
+        } else {
+            map.removeLayer(hp);
+        }
+    };
+
+    document.getElementById('select-all5').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hl);
+            map.addLayer(hpt);
+            map.addLayer(hpk);
+            map.addLayer(hp);
+        } else {
+            map.removeLayer(hl);
+            map.removeLayer(hpt);
+            map.removeLayer(hpk);
+            map.removeLayer(hp);
+        }
+    };
+    //TUTUPAN HUTAN
+    var hlks = new L.GeoJSON.AJAX(["json4/hutan/hlks.geojson"], {
+        onEachFeature: popUp,
+        style: stylehutan1
+    })
+    document.getElementById('hlks').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hlks);
+        } else {
+            map.removeLayer(hlks);
+        }
+    };
+
+    var hms = new L.GeoJSON.AJAX(["json4/hutan/hms.geojson"], {
+        onEachFeature: popUp,
+        style: stylehutan2
+    })
+    document.getElementById('hms').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hms);
+        } else {
+            map.removeLayer(hms);
+        }
+    };
+
+    var hrs = new L.GeoJSON.AJAX(["json4/hutan/hrs.geojson"], {
+        onEachFeature: popUp,
+        style: stylehutan3
+    })
+    document.getElementById('hrs').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hrs);
+        } else {
+            map.removeLayer(hrs);
+        }
+    };
+
+    document.getElementById('select-allhutan').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hlks);
+            map.addLayer(hms);
+            map.addLayer(hrs);
+        } else {
+            map.removeLayer(hlks);
+            map.removeLayer(hms);
+            map.removeLayer(hrs);
+        }
+    };
+
+    var hd = new L.GeoJSON.AJAX(["json4/izin hd/izinhd.geojson"], {
+        style: stylehd
+    })
+    document.getElementById('hd').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hd);
+        } else {
+            map.removeLayer(hd);
+        }
+    };
+
+    document.getElementById('select-all4').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hd);
+        } else {
+            map.removeLayer(hd);
+        }
+    };
+    // //rehabilitas
+    // var plot = new L.GeoJSON.AJAX(["json4/rehabilitasi/plotgbtdankarbon2.geojson"], {
+    //   onEachFeature: popUp,
+    //   style: styleplot
+    // })
+    // document.getElementById('plot').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(plot);
+    //   } else {
+    //     map.removeLayer(plot);
+    //   }
+    // };
+
+    // document.getElementById('select-allplot').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(plot);
+    //   } else {
+    //     map.removeLayer(plot);
+    //   }
+    // };
+
+    // var wpk = new L.GeoJSON.AJAX(["json4/wpk/wpk.geojson"], {
+    //   onEachFeature: popUp,
+    //   style: styleplot
+    // })
+    // document.getElementById('wpk').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(wpk);
+    //   } else {
+    //     map.removeLayer(wpk);
+    //   }
+    // };
+
+    // document.getElementById('select-allwpk').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(wpk);
+    //   } else {
+    //     map.removeLayer(wpk);
+    //   }
+    // };
+
+    // var karhutla15 = new L.GeoJSON.AJAX(["json4/karhutla/areaterbakar/2015.geojson"], {
+    //   onEachFeature: popUp,
+    //   style: stylekarhutla15
+    // })
+    // document.getElementById('karhutla15').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(karhutla15);
+    //   } else {
+    //     map.removeLayer(karhutla15);
+    //   }
+    // };
+
+    // var karhutla16 = new L.GeoJSON.AJAX(["json4/karhutla/areaterbakar/2016.geojson"], {
+    //   onEachFeature: popUp,
+    //   style: stylekarhutla16
+    // })
+    // document.getElementById('karhutla16').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(karhutla16);
+    //   } else {
+    //     map.removeLayer(karhutla16);
+    //   }
+    // };
+
+    // var karhutla17 = new L.GeoJSON.AJAX(["json4/karhutla/areaterbakar/2017.geojson"], {
+    //   onEachFeature: popUp,
+    //   style: stylekarhutla17
+    // })
+    // document.getElementById('karhutla17').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(karhutla17);
+    //   } else {
+    //     map.removeLayer(karhutla17);
+    //   }
+    // };
+
+    // var karhutla18 = new L.GeoJSON.AJAX(["json4/karhutla/areaterbakar/2018.geojson"], {
+    //   onEachFeature: popUp,
+    //   style: stylekarhutla18
+    // })
+    // document.getElementById('karhutla18').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(karhutla18);
+    //   } else {
+    //     map.removeLayer(karhutla18);
+    //   }
+    // };
+
+    // var karhutla19 = new L.GeoJSON.AJAX(["json4/karhutla/areaterbakar/2019.geojson"], {
+    //   onEachFeature: popUp,
+    //   style: stylekarhutla19
+    // })
+    // document.getElementById('karhutla19').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(karhutla19);
+    //   } else {
+    //     map.removeLayer(karhutla19);
+    //   }
+    // };
+
+    // document.getElementById('select-allkarhutla').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(karhutla15);
+    //     map.addLayer(karhutla16);
+    //     map.addLayer(karhutla17);
+    //     map.addLayer(karhutla18);
+    //     map.addLayer(karhutla19);
+    //   } else {
+    //     map.removeLayer(karhutla15);
+    //     map.removeLayer(karhutla16);
+    //     map.removeLayer(karhutla17);
+    //     map.removeLayer(karhutla18);
+    //     map.removeLayer(karhutla19);
+    //   }
+    // };
+
+
+    var kanal = new L.GeoJSON.AJAX(["json4/hidrologi/kanal.geojson"], {
+        onEachFeature: popUp,
+        style: stylekanal
+    })
+    document.getElementById('kanal').onclick = function () {
+        if (this.checked) {
+            map.addLayer(kanal);
+        } else {
+            map.removeLayer(kanal);
+        }
+    };
+
+    var sungai = new L.GeoJSON.AJAX(["json4/hidrologi/sungai.geojson"], {
+        onEachFeature: popUp,
+        style: stylesungai
+    })
+    document.getElementById('sungaikecil').onclick = function () {
+        if (this.checked) {
+            map.addLayer(sungai);
+        } else {
+            map.removeLayer(sungai);
+        }
+    };
+
+    var khg = new L.GeoJSON.AJAX(["json4/hidrologi/khg.geojson"], {
+        onEachFeature: popUp,
+        style: stylekhg
+    })
+    document.getElementById('khg').onclick = function () {
+        if (this.checked) {
+            map.addLayer(khg);
+        } else {
+            map.removeLayer(khg);
+        }
+    };
+
+    document.getElementById('select-allhidrologi').onclick = function () {
+        if (this.checked) {
+            map.addLayer(kanal);
+            map.addLayer(sungai);
+            map.addLayer(khg);
+        } else {
+            map.removeLayer(kanal);
+            map.removeLayer(sungai);
+            map.removeLayer(khg);
+        }
+    };
+
+    var br = new L.GeoJSON.AJAX(["json4/hutan/br.geojson"], {
+        onEachFeature: popUp,
+        style: stylebr
+    })
+    document.getElementById('br').onclick = function () {
+        if (this.checked) {
+            map.addLayer(br);
+        } else {
+            map.removeLayer(br);
+        }
+    };
+
+    var kbn = new L.GeoJSON.AJAX(["json4/hutan/kbn.geojson"], {
+        onEachFeature: popUp,
+        style: stylekbn
+    })
+    document.getElementById('kbn').onclick = function () {
+        if (this.checked) {
+            map.addLayer(kbn);
+        } else {
+            map.removeLayer(kbn);
+        }
+    };
+    var plk = new L.GeoJSON.AJAX(["json4/hutan/plk.geojson"], {
+        onEachFeature: popUp,
+        style: styleplk
+    })
+    document.getElementById('plk').onclick = function () {
+        if (this.checked) {
+            map.addLayer(plk);
+        } else {
+            map.removeLayer(plk);
+        }
+    };
+    var pmk = new L.GeoJSON.AJAX(["json4/hutan/pmk.geojson"], {
+        onEachFeature: popUp,
+        style: stylepmk
+    })
+    document.getElementById('pmk').onclick = function () {
+        if (this.checked) {
+            map.addLayer(pmk);
+        } else {
+            map.removeLayer(pmk);
+        }
+    };
+    var raw = new L.GeoJSON.AJAX(["json4/hutan/raw.geojson"], {
+        onEachFeature: popUp,
+        style: styleraw
+    })
+    document.getElementById('raw').onclick = function () {
+        if (this.checked) {
+            map.addLayer(raw);
+        } else {
+            map.removeLayer(raw);
+        }
+    };
+    var sb = new L.GeoJSON.AJAX(["json4/hutan/sb.geojson"], {
+        onEachFeature: popUp,
+        style: stylesb
+    })
+    document.getElementById('sb').onclick = function () {
+        if (this.checked) {
+            map.addLayer(sb);
+        } else {
+            map.removeLayer(sb);
+        }
+    };
+    var swh = new L.GeoJSON.AJAX(["json4/hutan/swh.geojson"], {
+        onEachFeature: popUp,
+        style: styleswh
+    })
+    document.getElementById('swh').onclick = function () {
+        if (this.checked) {
+            map.addLayer(swh);
+        } else {
+            map.removeLayer(swh);
+        }
+    };
+    var tbk = new L.GeoJSON.AJAX(["json4/hutan/tbk.geojson"], {
+        onEachFeature: popUp,
+        style: styletbk
+    })
+    document.getElementById('tbk').onclick = function () {
+        if (this.checked) {
+            map.addLayer(tbk);
+        } else {
+            map.removeLayer(tbk);
+        }
+    };
+    var ta = new L.GeoJSON.AJAX(["json4/hutan/ta.geojson"], {
+        onEachFeature: popUp,
+        style: styleta
+    })
+    document.getElementById('ta').onclick = function () {
+        if (this.checked) {
+            map.addLayer(ta);
+        } else {
+            map.removeLayer(ta);
+        }
+    };
+
+    var tt = new L.GeoJSON.AJAX(["json4/hutan/tt.geojson"], {
+        onEachFeature: popUp,
+        style: stylett
+    })
+    document.getElementById('tt').onclick = function () {
+        if (this.checked) {
+            map.addLayer(tt);
+        } else {
+            map.removeLayer(tt);
+        }
+    };
+
+    document.getElementById('select-allnonhutan').onclick = function () {
+        if (this.checked) {
+            map.addLayer(br);
+            map.addLayer(kbn);
+            map.addLayer(plk);
+            map.addLayer(pmk);
+            map.addLayer(raw);
+            map.addLayer(sb);
+            map.addLayer(swh);
+            map.addLayer(ta);
+            map.addLayer(tbk);
+            map.addLayer(tt);
+        } else {
+            map.removeLayer(br);
+            map.removeLayer(kbn);
+            map.removeLayer(plk);
+            map.removeLayer(pmk);
+            map.removeLayer(raw);
+            map.removeLayer(sb);
+            map.removeLayer(swh);
+            map.removeLayer(ta);
+            map.removeLayer(tbk);
+            map.removeLayer(tt);
+        }
+    };
+
+    var agakcuram = new L.GeoJSON.AJAX(["json4/lereng/agakcuram.geojson"], {
+        onEachFeature: popUp,
+        style: styleagakcuram
+    })
+    document.getElementById('agakcuram').onclick = function () {
+        if (this.checked) {
+            map.addLayer(agakcuram);
+        } else {
+            map.removeLayer(agakcuram);
+        }
+    };
+    var curam = new L.GeoJSON.AJAX(["json4/lereng/curam.geojson"], {
+        onEachFeature: popUp,
+        style: stylecuram
+    })
+    document.getElementById('curam').onclick = function () {
+        if (this.checked) {
+            map.addLayer(curam);
+        } else {
+            map.removeLayer(curam);
+        }
+    };
+    var datar = new L.GeoJSON.AJAX(["json4/lereng/datar.geojson"], {
+        onEachFeature: popUp,
+        style: styledatar
+    })
+    document.getElementById('datar').onclick = function () {
+        if (this.checked) {
+            map.addLayer(datar);
+        } else {
+            map.removeLayer(datar);
+        }
+    };
+    var extracuram = new L.GeoJSON.AJAX(["json4/lereng/extracuram.geojson"], {
+        onEachFeature: popUp,
+        style: styleekstracuram
+    })
+    document.getElementById('extracuram').onclick = function () {
+        if (this.checked) {
+            map.addLayer(extracuram);
+        } else {
+            map.removeLayer(extracuram);
+        }
+    };
+    var landai = new L.GeoJSON.AJAX(["json4/lereng/landai.geojson"], {
+        onEachFeature: popUp,
+        style: stylelandai
+    })
+    document.getElementById('landai').onclick = function () {
+        if (this.checked) {
+            map.addLayer(landai);
+        } else {
+            map.removeLayer(landai);
+        }
+    };
+    var sangatcuram = new L.GeoJSON.AJAX(["json4/lereng/sangatcuram.geojson"], {
+        onEachFeature: popUp,
+        style: stylesangatcuram
+    })
+    document.getElementById('sangatcuram').onclick = function () {
+        if (this.checked) {
+            map.addLayer(sangatcuram);
+        } else {
+            map.removeLayer(sangatcuram);
+        }
+    };
+    var sangatlandai = new L.GeoJSON.AJAX(["json4/lereng/sangatlandai.geojson"], {
+        onEachFeature: popUp,
+        style: stylesangatlandai
+    })
+    document.getElementById('sangatlandai').onclick = function () {
+        if (this.checked) {
+            map.addLayer(sangatlandai);
+        } else {
+            map.removeLayer(sangatlandai);
+        }
+    };
+
+    document.getElementById('select-alllereng').onclick = function () {
+        if (this.checked) {
+            map.addLayer(agakcuram);
+            map.addLayer(curam);
+            map.addLayer(datar);
+            map.addLayer(extracuram);
+            map.addLayer(landai);
+            map.addLayer(sangatcuram);
+            map.addLayer(sangatlandai);
+        } else {
+            map.removeLayer(agakcuram);
+            map.removeLayer(curam);
+            map.removeLayer(datar);
+            map.removeLayer(extracuram);
+            map.removeLayer(landai);
+            map.removeLayer(sangatcuram);
+            map.removeLayer(sangatlandai);
+        }
+    };
+
+    var hs = new L.GeoJSON.AJAX(["json4/tanah/hs.geojson"], {
+        onEachFeature: popUp,
+        style: stylehs
+    })
+    document.getElementById('hs').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hs);
+        } else {
+            map.removeLayer(hs);
+        }
+    };
+    var sf = new L.GeoJSON.AJAX(["json4/tanah/sf.geojson"], {
+        onEachFeature: popUp,
+        style: stylesf
+    })
+    document.getElementById('sf').onclick = function () {
+        if (this.checked) {
+            map.addLayer(sf);
+        } else {
+            map.removeLayer(sf);
+        }
+    };
+    var th = new L.GeoJSON.AJAX(["json4/tanah/th.geojson"], {
+        onEachFeature: popUp,
+        style: styleth
+    })
+    document.getElementById('th').onclick = function () {
+        if (this.checked) {
+            map.addLayer(th);
+        } else {
+            map.removeLayer(th);
+        }
+    };
+    var tk = new L.GeoJSON.AJAX(["json4/tanah/tk.geojson"], {
+        onEachFeature: popUp,
+        style: styletk
+    })
+    document.getElementById('tk').onclick = function () {
+        if (this.checked) {
+            map.addLayer(tk);
+        } else {
+            map.removeLayer(tk);
+        }
+    };
+    var tq = new L.GeoJSON.AJAX(["json4/tanah/tq.geojson"], {
+        onEachFeature: popUp,
+        style: styletq
+    })
+    document.getElementById('tq').onclick = function () {
+        if (this.checked) {
+            map.addLayer(tq);
+        } else {
+            map.removeLayer(tq);
+        }
+    };
+    var ts = new L.GeoJSON.AJAX(["json4/tanah/ts.geojson"], {
+        onEachFeature: popUp,
+        style: stylets
+    })
+    document.getElementById('ts').onclick = function () {
+        if (this.checked) {
+            map.addLayer(ts);
+        } else {
+            map.removeLayer(ts);
+        }
+    };
+
+    document.getElementById('select-alltanah').onclick = function () {
+        if (this.checked) {
+            map.addLayer(hs);
+            map.addLayer(sf);
+            map.addLayer(th);
+            map.addLayer(tk);
+            map.addLayer(tq);
+            map.addLayer(ts);
+        } else {
+            map.removeLayer(hs);
+            map.removeLayer(sf);
+            map.removeLayer(th);
+            map.removeLayer(tk);
+            map.removeLayer(tq);
+            map.removeLayer(ts);
+        }
+    };
+    var pusatdesa = new L.GeoJSON.AJAX(["json4/pusatdesafin.geojson"], {
+        onEachFeature: popUp,
+        style: myStyle
+    })
+
+    document.getElementById('pusatdesa').onclick = function () {
+        if (this.checked) {
+            map.addLayer(pusatdesa);
+        } else {
+            map.removeLayer(pusatdesa);
+        }
+    };
+
+    var desa = new L.GeoJSON.AJAX(["json4/batasdesaline2.geojson"], {
+        style: myStyle
+    })
+    document.getElementById('batasdesa').onclick = function () {
+        if (this.checked) {
+            map.addLayer(desa);
+        } else {
+            map.removeLayer(desa);
+        }
+    };
+    var lokasikunjungan = new L.GeoJSON.AJAX(["json4/lokkunjungan.geojson"], {
+        onEachFeature: popUp,
+        style: stylelokasikunjungan
+    })
+
+    document.getElementById('lokasikunjungan').onclick = function () {
+        if (this.checked) {
+            map.addLayer(lokasikunjungan);
+        } else {
+            map.removeLayer(lokasikunjungan);
+        }
+    };
+    document.getElementById('select-all').onclick = function () {
+        if (this.checked) {
+            map.addLayer(lokasikunjungan);
+            map.addLayer(pusatdesa);
+            map.addLayer(desa);
+
+        } else {
+            map.removeLayer(pusatdesa);
+            map.removeLayer(desa)
+            map.removeLayer(lokasikunjungan);
+        }
+    };
+
+
+    // document.getElementById('button-legend-layout-right').onclick = function () {
+    //   if (this.click) {
+    //     map.addLayer(lokasikunjungan);
+    //   } else {
+    //     map.removeLayer(lokasikunjungan);
+    //   }
+    // };
+
+    // document.getElementById('button-legend-layout-right').addEventListener('click', function () {
+    //   map.addLayer(lokasikunjungan)
+    // });
+
+
+    // document.getElementById('button-legend-layout-right').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(hpk);
+    //   } else {
+    //     map.removeLayer(hpk);
+    //   }
+    // };
+    // document.getElementById('select-all5').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(hl);
+    //     map.addLayer(hpt);
+    //     map.addLayer(hpk);
+    //     map.addLayer(hp);
+    //   } else {
+    //     map.removeLayer(hl);
+    //     map.removeLayer(hpt);
+    //     map.removeLayer(hpk);
+    //     map.removeLayer(hp);
+    //   }
+    // };
+
+    // var iconhotspot = L.icon({
+    //   iconUrl: 'icon/hotspot.png',
+    //   iconSize: [8, 13],
+    //   shadowSize: [0, 0],
+    //   iconAnchor: [10, 10],
+    //   shadowAnchor: [0, 0],
+    //   popupAnchor: [-6, -10]
+    // });
+
+    // var iconmonitgbt = L.icon({
+    //   iconUrl: 'icon/monitgbt.png',
+    //   iconSize: [8, 8],
+    //   shadowSize: [0, 0],
+    //   iconAnchor: [10, 10],
+    //   shadowAnchor: [0, 0],
+    //   popupAnchor: [-6, -10]
+    // });
+
+
+    // $.getJSON("json4/karhutla/hotspot15.geojson", function (data) {
+    //   // set violationPoints to the dataset, and add the rodent violation GeoJSON layer to the map
+    //   hotspot15 = L.geoJson(data, {
+    //     onEachFeature: function popUp(f, l) {
+    //       var out = [];
+    //       if (f.properties) {
+    //         for (key in f.properties) {
+    //           out.push(key + ": " + f.properties[key]);
+    //         }
+    //         l.bindPopup(out.join("<br />"));
+    //       }
+    //     },
+    //     pointToLayer: function (feature, latlng) {
+    //       var marker = L.marker(latlng, {
+    //         icon: iconhotspot
+    //       });
+    //       return marker;
+    //     }
+    //   })
+    // });
+
+    // document.getElementById('hotspot15').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(hotspot15);
+    //   } else {
+    //     map.removeLayer(hotspot15);
+    //   }
+    // };
+
+    // $.getJSON("json4/karhutla/hotspot16.geojson", function (data) {
+    //   // set violationPoints to the dataset, and add the rodent violation GeoJSON layer to the map
+    //   hotspot16 = L.geoJson(data, {
+    //     onEachFeature: function popUp(f, l) {
+    //       var out = [];
+    //       if (f.properties) {
+    //         for (key in f.properties) {
+    //           out.push(key + ": " + f.properties[key]);
+    //         }
+    //         l.bindPopup(out.join("<br />"));
+    //       }
+    //     },
+    //     pointToLayer: function (feature, latlng) {
+    //       var marker = L.marker(latlng, {
+    //         icon: iconhotspot
+    //       });
+    //       return marker;
+    //     }
+    //   })
+    // });
+
+    // document.getElementById('hotspot16').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(hotspot16);
+    //   } else {
+    //     map.removeLayer(hotspot16);
+    //   }
+    // };
+
+    // $.getJSON("json4/karhutla/hotspot17.geojson", function (data) {
+    //   // set violationPoints to the dataset, and add the rodent violation GeoJSON layer to the map
+    //   hotspot17 = L.geoJson(data, {
+    //     onEachFeature: function popUp(f, l) {
+    //       var out = [];
+    //       if (f.properties) {
+    //         for (key in f.properties) {
+    //           out.push(key + ": " + f.properties[key]);
+    //         }
+    //         l.bindPopup(out.join("<br />"));
+    //       }
+    //     },
+    //     pointToLayer: function (feature, latlng) {
+    //       var marker = L.marker(latlng, {
+    //         icon: iconhotspot
+    //       });
+    //       return marker;
+    //     }
+    //   })
+    // });
+
+    // document.getElementById('hotspot17').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(hotspot17);
+    //   } else {
+    //     map.removeLayer(hotspot17);
+    //   }
+    // };
+
+    // $.getJSON("json4/karhutla/hotspot18.geojson", function (data) {
+    //   // set violationPoints to the dataset, and add the rodent violation GeoJSON layer to the map
+    //   hotspot18 = L.geoJson(data, {
+    //     onEachFeature: function popUp(f, l) {
+    //       var out = [];
+    //       if (f.properties) {
+    //         for (key in f.properties) {
+    //           out.push(key + ": " + f.properties[key]);
+    //         }
+    //         l.bindPopup(out.join("<br />"));
+    //       }
+    //     },
+    //     pointToLayer: function (feature, latlng) {
+    //       var marker = L.marker(latlng, {
+    //         icon: iconhotspot
+    //       });
+    //       return marker;
+    //     }
+    //   })
+    // });
+
+    // document.getElementById('hotspot18').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(hotspot18);
+    //   } else {
+    //     map.removeLayer(hotspot18);
+    //   }
+    // };
+
+    // $.getJSON("json4/karhutla/hotspot192.geojson", function (data) {
+
+    //   // set violationPoints to the dataset, and add the rodent violation GeoJSON layer to the map
+    //   hotspot192 = L.geoJson(data, {
+    //     onEachFeature: function popUp(f, l) {
+    //       var out = [];
+    //       if (f.properties) {
+    //         for (key in f.properties) {
+    //           out.push(key + ": " + f.properties[key]);
+    //         }
+    //         l.bindPopup(out.join("<br />"));
+    //       }
+    //     },
+    //     pointToLayer: function (feature, latlng) {
+    //       var marker = L.marker(latlng, {
+    //         icon: iconhotspot
+    //       });
+    //       return marker;
+    //     }
+    //   })
+    // });
+
+    // document.getElementById('hotspot19').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(hotspot192);
+    //   } else {
+    //     map.removeLayer(hotspot192);
+    //   }
+    // };
+
+    // document.getElementById('select-allhotspot').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(hotspot15);
+    //     map.addLayer(hotspot16);
+    //     map.addLayer(hotspot17);
+    //     map.addLayer(hotspot18);
+    //     map.addLayer(hotspot192);
+    //   } else {
+    //     map.removeLayer(hotspot15);
+    //     map.removeLayer(hotspot16);
+    //     map.removeLayer(hotspot17);
+    //     map.removeLayer(hotspot18);
+    //     map.removeLayer(hotspot192);
+    //   }
+    // };
+
+    // $.getJSON("json4/monitoring_gbt/gbtjul19.geojson", function (data) {
+    //   // set violationPoints to the dataset, and add the rodent violation GeoJSON layer to the map
+    //   julgbt = L.geoJson(data, {
+    //     onEachFeature: function popUp(f, l) {
+    //       var out = [];
+    //       if (f.properties) {
+    //         for (key in f.properties) {
+    //           out.push(key + ": " + f.properties[key]);
+    //         }
+    //         l.bindPopup(out.join("<br />"));
+    //       }
+    //     },
+    //     pointToLayer: function (feature, latlng) {
+    //       var marker = L.marker(latlng, {
+    //         icon: iconmonitgbt
+    //       });
+    //       return marker;
+    //     }
+    //   })
+    // });
+
+    // document.getElementById('julgbt').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(julgbt);
+    //   } else {
+    //     map.removeLayer(julgbt);
+    //   }
+    // };
+
+    // document.getElementById('select-allmonitgbt').onclick = function () {
+    //   if (this.checked) {
+    //     map.addLayer(julgbt);
+    //   } else {
+    //     map.removeLayer(julgbt);
+    //   }
+    // };
+</script>
+
+</html>
