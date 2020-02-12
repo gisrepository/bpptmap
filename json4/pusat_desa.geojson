@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"name": "pusat_desa",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Long": "109� 14' 51,541\" E", "Lat": "0� 41' 35,982\" S", "Desa": "PADANG TIKAR 1" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.247650222320814, -0.6933283425023 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 14' 56,202\" E", "Lat": "0� 44' 22,578\" S", "Desa": "TASIK MALAYA" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.248945, -0.739605 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 15' 12,953\" E", "Lat": "0� 47' 26,617\" S", "Desa": "SUNGAI BESAR" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.253598, -0.790727 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 15' 23,267\" E", "Lat": "0� 48' 29,340\" S", "Desa": "SUNGAI JAWI" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.256463, -0.80815 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 15' 46,092\" E", "Lat": "0� 41' 50,846\" S", "Desa": "PADANG TIKAR 2" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.262803454885784, -0.69745710392426 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 16' 17,760\" E", "Lat": "0� 50' 45,038\" S", "Desa": "AMBAWARA" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.2716, -0.845844 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 16' 18,347\" E", "Lat": "0� 42' 22,712\" S", "Desa": "MEDAN MAS" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.271762982178771, -0.706309016127435 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 17' 1,435\" E", "Lat": "0� 52' 28,736\" S", "Desa": "TANJUNG HARAPAN" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.283732, -0.874649 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 25' 21,870\" E", "Lat": "0� 44' 46,413\" S", "Desa": "NIPAH PANJANG" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.422741670705022, -0.746225965629378 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 27' 10,215\" E", "Lat": "0� 46' 54,513\" S", "Desa": "TELUK NIBUNG" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.45283758526206, -0.781809123485818 ] ] } },
+{ "type": "Feature", "properties": { "Long": "109� 32' 13,716\" E", "Lat": "0� 44' 50,217\" S", "Desa": "BATU AMPAR" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.537143273883188, -0.747282602746207 ] ] } }
+]
+}

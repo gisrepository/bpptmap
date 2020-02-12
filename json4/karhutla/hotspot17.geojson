@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "hotspot17",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Point": 0, "Lat": -0.71525204181699997, "Long": 109.337188721, "Tanggal": "2017\/08\/01", "Confid": 81, "Kecamatan": "Batu Ampar", "Kabupaten": "Kab. Kubu Raya", "Tahun": 2017, "Desa": "Medan Mas", "Status": "Non HD", "Kawasan": "Non HD", "Fungsi": "APL" }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.337188721000189, -0.715252041999861, 0.0 ] ] } }
+]
+}

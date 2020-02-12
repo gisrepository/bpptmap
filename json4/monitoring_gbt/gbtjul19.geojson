@@ -1,0 +1,25 @@
+{
+"type": "FeatureCollection",
+"name": "gbtjul19",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Desa": "Ambarawa", "No Sample": "1", "Kedalaman (cm)": "12", "Periode": "Jul 2019", "Long": 109.3, "Lat": -0.85 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.301967300000086, -0.847393299999958, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Ambarawa", "No Sample": "2", "Kedalaman (cm)": "50", "Periode": "Jul 2019", "Long": 109.3, "Lat": -0.85 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.301808600000101, -0.847332899999934, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Ambarawa", "No Sample": "3", "Kedalaman (cm)": "30", "Periode": "Jul 2019", "Long": 109.3, "Lat": -0.85 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.301730600000042, -0.847295899999981, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Ambarawa", "No Sample": "4", "Kedalaman (cm)": "45", "Periode": "Jul 2019", "Long": 109.3, "Lat": -0.85 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.301426100000072, -0.8471871, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Ambarawa", "No Sample": "5", "Kedalaman (cm)": "30", "Periode": "Jul 2019", "Long": 109.3, "Lat": -0.85 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.301333200000016, -0.8470052, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Ambarawa", "No Sample": "6", "Kedalaman (cm)": "8", "Periode": "Jul 2019", "Long": 109.3, "Lat": -0.85 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.301372400000062, -0.846941499999968, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Sungai Besar", "No Sample": "1", "Kedalaman (cm)": "56", "Periode": "Jul 2019", "Long": 109.26, "Lat": -0.77 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.2608026, -0.774805399999959, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Sungai Besar", "No Sample": "2", "Kedalaman (cm)": "40", "Periode": "Jul 2019", "Long": 109.26, "Lat": -0.77 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.26091980000011, -0.774775399999964, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Sungai Besar", "No Sample": "3", "Kedalaman (cm)": "30", "Periode": "Jul 2019", "Long": 109.26, "Lat": -0.77 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.26076020000005, -0.774695499999926, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Sungai Besar", "No Sample": "4", "Kedalaman (cm)": "35", "Periode": "Jul 2019", "Long": 109.26, "Lat": -0.77 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.260884100000084, -0.774692499999944, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Tasik Malaya", "No Sample": "1", "Kedalaman (cm)": "7", "Periode": "Jul 2019", "Long": 109.26, "Lat": -0.75 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.259217200000094, -0.752876499999925, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Tasik Malaya", "No Sample": "2", "Kedalaman (cm)": "0", "Periode": "Jul 2019", "Long": 109.26, "Lat": -0.75 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.259227200000041, -0.752740499999952, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Tasik Malaya", "No Sample": "3", "Kedalaman (cm)": "30", "Periode": "Jul 2019", "Long": 109.26, "Lat": -0.75 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.259225900000018, -0.752732799999937, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Tasik Malaya", "No Sample": "4", "Kedalaman (cm)": "0", "Periode": "Jul 2019", "Long": 109.26, "Lat": -0.75 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.258931500000088, -0.752731099999974, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Padang Tikar 1", "No Sample": "1", "Kedalaman (cm)": "46", "Periode": "Jul 2019", "Long": 109.27, "Lat": -0.73 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.269916666666745, -0.726666666666631, 0.0 ], [ 109.269917409367395, -0.726664790130826, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Padang Tikar 1", "No Sample": "2", "Kedalaman (cm)": "68", "Periode": "Jul 2019", "Long": 109.27, "Lat": -0.73 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.26975, -0.726805555555472, 0.0 ], [ 109.269756795749345, -0.726807557791176, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Padang Tikar 1", "No Sample": "3", "Kedalaman (cm)": "48", "Periode": "Jul 2019", "Long": 109.27, "Lat": -0.73 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.26963782269911, -0.726664790130826, 0.0 ], [ 109.269638888888892, -0.726666666666631, 0.0 ] ] } },
+{ "type": "Feature", "properties": { "Desa": "Padang Tikar 1", "No Sample": "4", "Kedalaman (cm)": "58", "Periode": "Jul 2019", "Long": 109.27, "Lat": -0.73 }, "geometry": { "type": "MultiPoint", "coordinates": [ [ 109.26975, -0.72652777777779, 0.0 ], [ 109.26975084709693, -0.726533919775534, 0.0 ] ] } }
+]
+}
